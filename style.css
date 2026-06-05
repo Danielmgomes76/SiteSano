@@ -1,0 +1,446 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden; /* Impede o site de vazar para os lados */
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    background-color: #ffffff;
+    overflow-x: hidden; /* Garante que nada quebre a largura da tela */
+    width: 100%;
+}
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* HEADER */
+header {
+    background: #ffffff;
+    box-shadow: 0 2px 10px rgba(0,0,0,.08);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0; /* Adicionado para garantir o alinhamento inicial */
+    z-index: 1000;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.logo img {
+    height: 85px;
+    object-fit: contain;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+nav a {
+    position: relative;
+    font-size: 1.1rem;
+    text-decoration: none;
+    color: #5A46A0;
+    font-weight: 600;
+    transition: .3s;
+}
+
+nav a:hover {
+    color: #A6C80A;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 3px;
+    background: #5A46A0;
+    transition: 0.3s;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* BANNER */
+.banner {
+    background: url('Imagens/banner.jpg') center center/cover;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;          
+}
+
+.overlay {
+    background: linear-gradient(
+        180deg,
+        rgba(90,70,160,0.90) 0%,
+        rgba(255,255,255,0.95) 60%,
+        rgba(166,200,10,0.25) 100%
+    );
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 120px 20px 60px 20px;
+    width: 100%;
+    min-height: 100vh;
+    text-align: center;   
+}
+
+.banner-text {
+    max-width: 1200px;
+    width: 100%;
+    text-align: center;
+    color: #222222;
+}
+
+.banner-text h1 {
+    font-size: clamp(2.2rem, 4vw, 4rem);
+    line-height: 1.3;
+    font-weight: 700;
+    color: #463878;
+    max-width: 1000px;
+    margin: 40px auto 40px;
+}
+
+.banner-text span {
+    color: #A6C80A;
+}
+
+/* CARROSSEL INFINITO DE LOGOS */
+.marcas-slider {
+    width: 100%;
+    overflow: hidden;
+    margin: 40px auto;
+    padding: 20px 0;
+    position: relative;
+}
+
+.marcas-track {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    width: max-content;
+    animation: scrollMarcas 30s linear infinite;
+}
+
+.marcas-track img {
+    height: 75px;
+    width: auto;
+    object-fit: contain;
+    transition: .3s;
+    filter: grayscale(20%);
+}
+
+.marcas-track img:hover {
+    filter: grayscale(0%);
+    transform: scale(1.05);
+}
+
+@keyframes scrollMarcas {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+}
+
+.btn {
+    background: #A6C80A;
+    color: #fff;
+    padding: 15px 35px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: .3s;
+    display: inline-block;
+    margin-top: 50px; /* Aumentamos o espaço aqui */
+    box-shadow: 0 4px 15px rgba(166, 200, 10, 0.3);
+}
+
+.btn:hover {
+    background: #8CAA08;
+    transform: translateY(-2px);
+}
+
+/* EMPRESA */
+.empresa {
+    padding: 130px 0 100px 0; /* Aumentamos o espaçamento no topo de 100px para 140px */
+    background: #ecf8d3;
+}
+
+.empresa h2 {
+    text-align: center;
+    margin-bottom: 60px;
+    color: #5A46A0;
+    font-size: 2.2rem;
+}
+
+.empresa-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.empresa-card {
+    background: #fff;
+    padding: 35px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,.06);
+    transition: .3s;
+}
+
+.empresa-card:hover {
+    transform: translateY(-8px);
+}
+
+.empresa-card h3 {
+    color: #5A46A0;
+    margin-bottom: 20px;
+    font-size: 1.4rem;
+    text-align: center;
+}
+
+.empresa-card p {
+    line-height: 1.8;
+    color: #555;
+    text-align: justify;
+    font-size: 1rem;
+}
+
+/* PORTFÓLIO & CARDS DE MARCAS */
+.portfolio {
+    background: linear-gradient(180deg, #ecf8d3 0%, #ffffff 100%); /* Transição suave */
+    padding: 140px 0 100px 0;
+}
+
+.portfolio h2 {
+    text-align: center;
+    margin-bottom:30px;
+    color: #5A46A0;
+    font-size: 2.2rem;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background: white;
+    border-radius: 15px;
+    padding: 30px 20px;
+    box-shadow: 0 5px 25px rgba(0,0,0,.06);
+    transition: .3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 30px rgba(90, 70, 160, 0.12);
+}
+
+.card img {
+    height: 90px;
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+
+.card-content {
+    width: 100%;
+    text-align: center;
+}
+
+/* Estilização das Faixas das Marcas */
+.empresa-faixa {
+    width: 100%;
+    color: #ffffff;
+    font-size: 1.3rem;
+    font-weight: 700;
+    text-align: center;
+    padding: 12px 10px;
+    margin: 15px 0;
+    border-radius: 6px;
+    display: block;
+}
+
+.faixa-mano-velho { background: #2F6F57; }
+.faixa-grano-square { background: #000000; }
+.faixa-kiro { background: #930093; }
+.faixa-tao { background: #7A005A; }
+.faixa-legurme { background: #014d01; }
+.faixa-winstage { background: #8cc3fe; }
+.faixa-fhon { background: #F5A623; }
+
+.card-content p {
+    text-align: justify;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 20px;
+    font-size: 0.95rem;
+    height: 100px; /* Mantém os textos alinhados */
+    overflow: hidden;
+}
+
+.btn-card {
+    display: inline-block;
+    text-decoration: none;
+    background: #5A46A0;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: .3s;
+    width: 100%;
+}
+
+.btn-card:hover {
+    background: #A6C80A;
+}
+
+/* CONTATO */
+.contato {
+    padding: 100px 0;
+    text-align: center;
+    background: #f8fafc;
+}
+
+.contato h2 {
+    color: #5A46A0;
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+}
+
+.contato p {
+    color: #666;
+    font-size: 1.1rem;
+}
+
+.contato-botoes {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.whatsapp, .email {
+    text-decoration: none;
+    color: white;
+    padding: 16px 35px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: .3s;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.whatsapp { background: #25d366; }
+.whatsapp:hover { background: #1ebd58; transform: translateY(-2px); }
+
+.email { background: #2563eb; }
+.email:hover { background: #1d4ed8; transform: translateY(-2px); }
+
+/* FOOTER */
+footer {
+    background: #0f172a;
+    color: #94a3b8;
+    text-align: center;
+    padding: 30px 20px;
+    font-size: 0.95rem;
+}
+
+/* RESPONSIVO */
+/* RESPONSIVO COMPLETO */
+@media(max-width: 768px) {
+    /* Ajusta o Header para celular */
+    header {
+        width: 100vw; /* Garante que o menu ocupe exatamente a largura da tela visível */
+        left: 0;
+    }
+
+    .header-content {
+        flex-direction: column;
+        gap: 10px;
+        padding: 15px 0; 
+        width: 100%;
+    }
+
+    .logo img {
+        height: 55px; /* Diminui um pouquinho para ganhar espaço */
+        display: block;
+        margin: 0 auto;
+    }
+
+    nav {
+        width: 100%;
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: center; 
+        gap: 12px; /* Reduzido levemente para caber o botão 'Contato' sem quebrar linha */
+        padding: 0;
+        width: 100%;
+    }
+    
+    nav a {
+        font-size: 0.9rem; /* Ajuste fino na fonte */
+    }
+
+    /* Blindagem do Carrossel para não vazar no celular */
+    .marcas-slider {
+        width: 100%;
+        max-width: 100vw; /* Limita o slider à largura da tela do celular */
+        overflow: hidden; /* Corta drasticamente qualquer logo que tente sair da tela */
+        margin: 20px auto;
+    }
+    .marcas-track {
+        gap: 30px; /* Aproxima as logos no celular */
+    }
+
+    .marcas-track img {
+        height: 55px; /* Deixa as logos menores na tela do celular */
+    }
+
+    .btn {
+        margin-top: 30px; /* Diminui o espaçamento do botão no celular */
+        width: 100%; /* O botão fica do tamanho da tela, mais fácil de clicar */
+        text-align: center;
+    }
+
+    /* Corrige os espaçamentos das Seções */
+    .empresa, .portfolio, .contato {
+        padding: 100px 0 60px 0; /* Menos espaço em branco no celular */
+    }
+
+    /* Libera a altura dos textos nos cards para não cortar palavras */
+    .card-content p {
+        height: auto; 
+        margin-bottom: 20px;
+    }
+}
