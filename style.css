@@ -348,10 +348,12 @@ nav a:hover::after {
 
 /* CONTATO */
 .contato {
-    padding: 100px 0;
-    text-align: center;
-    background: #f8fafc;
-}
+        display: block !important;
+        clear: both !important;
+        position: relative !important;
+        box-sizing: border-box !important;
+        padding: 90px 20px 120px 20px !important; /* Mais espaçamento em cima e embaixo */
+    }
 
 .contato h2 {
     color: #5A46A0;
