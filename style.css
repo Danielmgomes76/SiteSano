@@ -524,15 +524,15 @@ footer {
        ========================================================================== */
     
     #empresa {
-        scroll-margin-top: 85px !important; /* Deixa coladinho no menu */
+        scroll-margin-top: 70px !important; /* Deixa coladinho no menu */
     }
 
     #portfolio {
-        scroll-margin-top: 85px !important; /* Deixa coladinho no menu */
+        scroll-margin-top: 70px !important; /* Deixa coladinho no menu */
     }
 
     #contato {
-        scroll-margin-top: 85px !important; /* Agora segue exatamente o mesmo padrão dos outros */
+        scroll-margin-top: 60px !important; /* Agora segue exatamente o mesmo padrão dos outros */
         min-height: auto !important; 
     }
 }
