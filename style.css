@@ -227,5 +227,293 @@ nav a:hover::after {
     margin: 0 !important; 
     padding: 22px 15px !important; 
     font-size: 1.3rem !important;
-    font-weight: 600 !important;
+    font-weight: 700 !important;
+    text-align: center !important; 
+    width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+/* AJUSTE EXCLUSIVO DO TEXTO INTERNO DO CARD DA EMPRESA */
+.empresa-card p {
+    font-size: 0.95rem !important;
+    line-height: 1.65 !important;
+    color: #444444 !important;
+    text-align: left !important; 
+    padding: 25px 24px 30px 24px !important; 
+    margin: 0 !important;
+}
+
+/* PORTFÓLIO & CARDS DE MARCAS */
+.portfolio {
+    background: linear-gradient(180deg, #ecf8d3 0%, #ffffff 100%); 
+    padding: 140px 0 100px 0;
+}
+
+.portfolio h2 {
+    text-align: center;
+    margin-bottom:30px;
+    color: #5A46A0;
+    font-size: 2.2rem;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    justify-content: center;
+}
+
+.card {
+    background-color: #ffffff;
+    border-radius: 12px; 
+    padding: 30px 24px;
+    width: 100%;
+    max-width: 360px;
+    border-top: 3px solid #e2e8f0; 
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03); 
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    position: relative;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card:hover {
+    transform: translateY(-4px); 
+    border-top-color: #4C3B88; 
+    box-shadow: 0 12px 20px rgba(76, 59, 136, 0.08); 
+}
+
+.card img {
+    height: 90px;
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+
+.card-content {
+    width: 100%;
+    text-align: center;
+}
+
+/* Estilização das Faixas das Marcas */
+.empresa-faixa {
+    width: 100%;
+    color: #ffffff;
+    font-size: 1.3rem;
+    font-weight: 700;
+    text-align: center;
+    padding: 12px 10px;
+    margin: 15px 0;
+    border-radius: 6px;
+    display: block;
+}
+
+.faixa-mano-velho { background: #2F6F57; }
+.faixa-grano-square { background: #000000; }
+.faixa-kiro { background: #930093; }
+.faixa-tao { background: #7A005A; }
+.faixa-legurme { background: #014d01; }
+.faixa-winstage { background: #8cc3fe; }
+.faixa-fhon { background: #F5A623; }
+.faixa-cozinha-leve { background: #B91C1C; }
+
+.card-content p {
+    text-align: justify;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 20px;
+    font-size: 0.95rem;
+    height: 100px; 
+    overflow: hidden;
+}
+
+.btn-card {
+    display: inline-block;
+    text-decoration: none;
+    background: #5A46A0;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: .3s;
+    width: 100%;
+}
+
+.btn-card:hover {
+    background: #A6C80A;
+}
+
+/* CONTATO */
+.contato {
+    padding: 100px 0;
+    text-align: center;
+    background: #f8fafc;
+}
+
+.contato h2 {
+    color: #5A46A0;
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+}
+
+.contato p {
+    color: #666;
+    font-size: 1.1rem;
+}
+
+.contato-botoes {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.whatsapp, .email {
+    text-decoration: none;
+    color: white;
+    padding: 16px 35px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: .3s;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.whatsapp { background: #25d366; }
+.whatsapp:hover { background: #1ebd58; transform: translateY(-2px); }
+
+.email { background: #2563eb; }
+.email:hover { background: #1d4ed8; transform: translateY(-2px); }
+
+/* FOOTER */
+footer {
+    background: #0f172a;
+    color: #94a3b8;
+    text-align: center;
+    padding: 30px 20px;
+    font-size: 0.95rem;
+}
+
+/* ==========================================================================
+    BLOCO DE RESPONSIVIDADE ADAPTADO E ARRUMADO PARA SMARTPHONES
+   ========================================================================== */
+@media (max-width: 768px) {
+    
+    /* 1. CABEÇALHO MOBILE */
+    header {
+        width: 100vw; 
+        left: 0;
+        position: fixed;
+        z-index: 9999;
+    }
+
+    .header-content {
+        flex-direction: column;
+        gap: 5px; 
+        padding: 10px 0; 
+        width: 100%;
+    }
+
+    .logo img {
+        height: 45px; 
+        display: block;
+        margin: 0 auto;
+    }
+
+    nav {
+        width: 100%;
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: center; 
+        gap: 12px; 
+        padding: 0;
+        width: 100%;
+    }
+    
+    nav a {
+        font-size: 0.9rem; 
+    }
+
+    /* 2. CARROSSEL MOBILE */
+    .marcas-slider {
+        width: 100%;
+        max-width: 100vw; 
+        overflow: hidden; 
+        margin: 20px auto;
+    }
+    
+    .marcas-track {
+        gap: 30px; 
+    }
+
+    .marcas-track img {
+        height: 55px; 
+    }
+
+    .btn {
+        margin-top: 30px; 
+        width: 100%; 
+        text-align: center;
+    }
+
+    /* 3. SEÇÕES COM REAPROVEITAMENTO DAS MARGENS LATERAIS */
+    .empresa, .portfolio, .contato {
+        display: block !important;
+        clear: both !important;
+        position: relative !important;
+        box-sizing: border-box !important;
+        padding: 60px 0 !important; /* Espaçamento vertical equilibrado */
+    }
+
+    /* Ajuste estrutural do Grid da Empresa e Portfólio no Celular */
+    .empresa-grid, .cards {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 25px !important;
+        width: 100% !important;
+        padding: 0 5% !important; /* Alinha a tabulação criando margens perfeitas na tela */
+    }
+
+    /* Ajuste de Cards individuais */
+    .empresa-card, .card {
+        max-width: 100% !important;
+        width: 100% !important;
+    }
+
+    /* Libera e normaliza o preenchimento dos parágrafos dos cards */
+    .card-content p {
+        height: auto !important; 
+        margin-bottom: 20px !important;
+    }
+
+    .empresa-card p {
+        text-align: left !important;
+        padding: 20px 18px 25px 18px !important;
+    }
+
+    /* Reset de Títulos */
+    .empresa h2, .portfolio h2, .contato h2 {
+        padding-top: 0 !important;
+        margin-top: 0 !important;
+        margin-bottom: 25px !important;
+        text-align: center !important;
+    }
+
+    /* Ancoragem fluida dos links */
+    #empresa, #portfolio, #contato {
+        scroll-margin-top: 135px !important;
+    }
+    
+    #contato {
+        min-height: auto !important;
+    }
 }
