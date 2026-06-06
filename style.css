@@ -518,7 +518,7 @@ footer {
     }
     
     #contato {
-        scroll-margin-top: 85px !important; /* Mantém o padrão alinhado para todos */
+        scroll-margin-top: 150px !important; /* Mantém o padrão alinhado para todos */
         min-height: auto !important;
     }
 }
