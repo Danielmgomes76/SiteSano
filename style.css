@@ -400,15 +400,6 @@ footer {
     font-size: 0.95rem;
 }
 
-Putz, peço desculpas! Você tem toda razão em ficar bravo. Eu acabei complicando o que era para ser simples e baguncei o comportamento do layout tentando adivinhar o comportamento do navegador. Vamos voltar duas casas e resolver isso com o que realmente funciona para o celular, sem inventar moda.
-
-O problema de "vazar" o botão "Ver Produtos" no topo do Contato acontece única e exclusivamente porque a seção .contato não tem altura suficiente no celular para permitir que a página continue rolando.
-
-Em vez de mexer em margem negativa ou mexer na seção do Portfólio (o que acaba desalinhando as outras coisas), a solução correta é apenas dar um "respiro" maior (padding) no topo da seção de contato no mobile.
-
-Substitua o seu bloco @media (max-width: 768px) por este aqui, que mantém a sua estrutura original e limpa, corrigindo apenas o espaçamento do contato:
-
-CSS
 /* ==========================================================================
    BLOCO DE RESPONSIVIDADE CORRIGIDO (FIM DOS BURACOS EM BRANCO)
    ========================================================================== */
@@ -474,22 +465,13 @@ CSS
     }
 
     /* 3. NORMALIZAÇÃO DO TAMANHO DAS SEÇÕES (REDUZIDO) */
-    .empresa, .portfolio {
+    .empresa, .portfolio, .contato {
         display: block !important;
         clear: both !important;
         position: relative !important;
         box-sizing: border-box !important;
+        /* Remove os paddings gigantes e deixa um espaçamento interno padrão e limpo */
         padding: 50px 20px !important; 
-    }
-
-    /* O AJUSTE EXCLUSIVO AQUI: Aumentamos o padding-top de 50px para 120px 
-       para empurrar o "Entre em Contato" para baixo, escondendo o botão de cima */
-    .contato {
-        display: block !important;
-        clear: both !important;
-        position: relative !important;
-        box-sizing: border-box !important;
-        padding: 120px 20px 80px 20px !important; 
     }
 
     /* Libera a altura dos textos nos cards */
@@ -516,20 +498,22 @@ CSS
     }
 
     /* ==========================================================================
-        🎯 ANCORAGEM PADRONIZADA COM 135PX (IGUAL AO SEU ORIGINAL)
+       🎯 NOVA ANCORAGEM PERFEITA (O SEGREDO PARA NÃO CORTAR)
        ========================================================================== */
     
+    /* Quando clicar nos links, o navegador vai parar exatamente 135px ANTES da seção,
+       escondendo o botão da seção anterior perfeitamente atrás do menu branco */
     #empresa {
-        scroll-margin-top: 135px !important;
+        scroll-margin-top: 120px !important;
     }
 
     #portfolio {
-        scroll-margin-top: 135px !important;
+        scroll-margin-top: 120px !important;
     }
 
     #contato {
-        scroll-margin-top: 135px !important;
-        min-height: auto !important; 
+        scroll-margin-top: 120px !important;
+        min-height: auto !important; /* Remove o tamanho gigante anterior */
     }
 }
 /* ==========================================================================
