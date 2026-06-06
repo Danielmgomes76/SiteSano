@@ -376,15 +376,15 @@ footer {
 }
 
 /* ==========================================================================
-   BLOCO UNIFICADO E CORRIGIDO DE RESPONSIVIDADE PARA CELULAR
-   ========================================================================== */
+   BLOCO EXTRA FORTE DE RESPONSIVIDADE (COPIE E COLE TUDO ABAIXO)
+   ========================================================================= */
 @media (max-width: 768px) {
     
     /* 1. AJUSTES DO CABEÇALHO (HEADER) */
     header {
         width: 100vw; 
         left: 0;
-        position: fixed; /* Garante o comportamento fixo */
+        position: fixed;
         z-index: 9999;
     }
 
@@ -439,47 +439,57 @@ footer {
         text-align: center;
     }
 
-    /* 3. RESPIRO E ISOLAMENTO DAS SEÇÕES */
+    /* 3. ISOLAMENTO ABSOLUTO DAS SEÇÕES
+       Isso mata qualquer vazamento de elementos de uma seção para outra */
     .empresa, .portfolio, .contato {
-        display: block;
-        clear: both; 
-        position: relative;
-        padding: 60px 0 !important; /* Dá um respiro saudável entre os blocos */
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        width: 100% !important;
+        clear: both !important;
+        position: relative !important;
+        box-sizing: border-box !important;
     }
 
-    /* 🔥 RESOLVE O BUG DO BOTÃO DA COZINHA LEVE:
-       Dá uma folga no fundo do portfolio para o card caber inteiro sem invadir o contato */
-    .portfolio {
-        padding-bottom: 120px !important; 
+    /* Garante que o container de cards não deixe nada vazar para o contato */
+    .portfolio .cards {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 25px !important;
+        width: 100% !important;
+        margin-bottom: 50px !important; /* Cria um espaço real abaixo do último card */
     }
 
-    /* 4. LIBERAÇÃO DOS TEXTOS DOS CARDS */
+    /* Libera a altura dos textos nos cards */
     .card-content p {
-        height: auto; 
-        margin-bottom: 20px;
+        height: auto !important; 
+        margin-bottom: 20px !important;
     }
 
-    /* ==========================================================================
-       🎯 AJUSTE DE ALINHAMENTO DA ROLAGEM (LIMPO E PRECISO)
-       ========================================================================== */
-    
-    /* Reseta os títulos h2 removendo o truque antigo que causava sobreposição */
+    /* 4. RESET TOTAL DOS H2 ANTERIORES */
     .empresa h2, .portfolio h2, .contato h2 {
         padding-top: 0 !important;
         margin-top: 0 !important;
+        margin-bottom: 30px !important;
+        text-align: center !important;
+        width: 100% !important;
     }
 
-    /* Nova ancoragem limpa baseada no tamanho exato do seu cabeçalho */
+    /* 5. ANCORAGEM LIMPA VIA PADDING NO TOQUE DO LINK
+       Isso vai empurrar as seções fisicamente para baixo na rolagem */
     #empresa {
-        scroll-margin-top: 60px; /* Calibrado para alinhar igual ao portfolio */
+        padding-top: 135px !important; /* Baixa o "Sobre a Empresa" para não cobrir */
+        padding-bottom: 40px !important;
     }
 
     #portfolio {
-        scroll-margin-top: 60px; /* Mantém o alinhamento perfeito que você curtiu */
+        padding-top: 135px !important; /* Mantém o portfólio no lugar que deu certo */
+        padding-bottom: 40px !important;
     }
 
     #contato {
-        scroll-margin-top: 10px; /* Pára o menu exatamente acima do Entre em Contato */
+        padding-top: 145px !important; /* Empurra o "Entre em Contato" bem para longe dos cards de cima */
+        padding-bottom: 60px !important;
     }
 }
 /* ==========================================================================
