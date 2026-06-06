@@ -516,15 +516,15 @@ footer {
        🎯 NOVA ANCORAGEM PERFEITA (O SEGREDO PARA NÃO CORTAR)
        ========================================================================== */
     #empresa {
-        scroll-margin-top: 120px !important;
+        scroll-margin-top: 100px !important;
     }
 
     #portfolio {
-        scroll-margin-top: 120px !important;
+        scroll-margin-top: 100px !important;
     }
 
     #contato {
-        scroll-margin-top: 120px !important;
+        scroll-margin-top: 100px !important;
         min-height: auto !important;
     }
 }
