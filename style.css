@@ -348,12 +348,10 @@ nav a:hover::after {
 
 /* CONTATO */
 .contato {
-        display: block !important;
-        clear: both !important;
-        position: relative !important;
-        box-sizing: border-box !important;
-        padding: 120px 20px 120px 20px !important; /* Mais espaçamento em cima e embaixo */
-    }
+    padding: 100px 0;
+    text-align: center;
+    background: #f8fafc;
+}
 
 .contato h2 {
     color: #5A46A0;
@@ -466,14 +464,34 @@ footer {
         text-align: center;
     }
 
-    /* 3. NORMALIZAÇÃO DO TAMANHO DAS SEÇÕES (REDUZIDO) */
-    .empresa, .portfolio, .contato {
+    /* 3. NORMALIZAÇÃO DO TAMANHO DAS SEÇÕES E EXPANSÃO DO CONTATO */
+    .empresa {
         display: block !important;
         clear: both !important;
         position: relative !important;
         box-sizing: border-box !important;
-        /* Remove os paddings gigantes e deixa um espaçamento interno padrão e limpo */
         padding: 50px 20px !important; 
+    }
+
+    /* Puxa o portfólio para cima e diminui a folga do final dele */
+    .portfolio {
+        display: block !important;
+        clear: both !important;
+        position: relative !important;
+        box-sizing: border-box !important;
+        padding: 50px 20px 15px 20px !important; /* Reduzido padding inferior */
+        margin-bottom: -50px !important; /* Puxa o final da seção para cima */
+    }
+
+    /* Força o contato a ocupar espaço suficiente na tela para dar curso ao scroll */
+    .contato {
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important; /* Centraliza o conteúdo elegantemente */
+        align-items: center !important;
+        box-sizing: border-box !important;
+        padding: 80px 20px !important; 
+        min-height: 85vh !important; /* O segredo para o celular ter espaço para rolar e esconder o "Ver Produtos" */
     }
 
     /* Libera a altura dos textos nos cards */
@@ -491,6 +509,12 @@ footer {
         margin-bottom: 20px !important;
     }
 
+    /* Ajuste de espaçamento dos botões de contato no celular */
+    .contato-botoes {
+        margin-top: 40px !important;
+        width: 100% !important;
+    }
+
     /* Reset definitivo dos h2 */
     .empresa h2, .portfolio h2, .contato h2 {
         padding-top: 0 !important;
@@ -500,24 +524,19 @@ footer {
     }
 
     /* ==========================================================================
-       🎯 NOVA ANCORAGEM PERFEITA (O SEGREDO PARA NÃO CORTAR)
+        🎯 NOVA ANCORAGEM PERFEITA PADRONIZADA
        ========================================================================== */
     
-    /* Quando clicar nos links, o navegador vai parar exatamente 135px ANTES da seção,
-       escondendo o botão da seção anterior perfeitamente atrás do menu branco */
+    /* Todas as seções agora usam o mesmo padrão exato de folga abaixo do menu */
     #empresa {
-        scroll-margin-top: 135px !important;
+        scroll-margin-top: 85px !important;
     }
 
     #portfolio {
-        scroll-margin-top: 135px !important;
+        scroll-margin-top: 85px !important;
     }
 
     #contato {
-        scroll-margin-top: 135px !important;
-        min-height: auto !important; /* Remove o tamanho gigante anterior */
+        scroll-margin-top: 85px !important; 
     }
 }
-/* ==========================================================================
-   FIM DO BLOCO
-   ========================================================================== */
