@@ -449,15 +449,15 @@ footer {
 @media (max-width: 768px) {
     
     #empresa {
-        scroll-margin-top: 40px; /* Ajuste fino para o "Sobre a Empresa" */
+        scroll-margin-top: 10px; /* Ajuste fino para o "Sobre a Empresa" */
     }
 
     #portfolio {
-        scroll-margin-top: 50px; /* Ajuste fino para o "Marcas Representadas" */
+        scroll-margin-top: 20px; /* Ajuste fino para o "Marcas Representadas" */
     }
 
     #contato {
-        scroll-margin-top: 120px; /* Ajuste fino para o "Entre em Contato" */
+        scroll-margin-top: 90px; /* Ajuste fino para o "Entre em Contato" */
     }
 
 }
