@@ -377,22 +377,24 @@ footer {
 
 /* RESPONSIVO */
 /* RESPONSIVO COMPLETO */
-@media(max-width: 768px) {
+@media (max-width: 768px) {
     /* Ajusta o Header para celular */
     header {
-        width: 100vw; /* Garante que o menu ocupe exatamente a largura da tela visível */
+        width: 100vw; 
         left: 0;
     }
 
+    /* 🟢 AQUI VOCÊ AJUSTA A ALTURA DO CABEÇALHO:
+       Diminuir o padding vertical (10px) e o gap (5px) deixa o cabeçalho mais fino! */
     .header-content {
         flex-direction: column;
-        gap: 10px;
-        padding: 15px 0; 
+        gap: 5px; /* Espaço entre a logo e os links */
+        padding: 10px 0; /* Espaço interno superior e inferior do menu */
         width: 100%;
     }
 
     .logo img {
-        height: 55px; /* Diminui um pouquinho para ganhar espaço */
+        height: 45px; /* Reduzido levemente para o menu ocupar menos altura na tela */
         display: block;
         margin: 0 auto;
     }
@@ -404,60 +406,59 @@ footer {
     nav ul {
         display: flex;
         justify-content: center; 
-        gap: 12px; /* Reduzido levemente para caber o botão 'Contato' sem quebrar linha */
+        gap: 12px; 
         padding: 0;
         width: 100%;
     }
     
     nav a {
-        font-size: 0.9rem; /* Ajuste fino na fonte */
+        font-size: 0.9rem; 
     }
 
-    /* Blindagem do Carrossel para não vazar no celular */
+    /* Blindagem do Carrossel */
     .marcas-slider {
         width: 100%;
-        max-width: 100vw; /* Limita o slider à largura da tela do celular */
-        overflow: hidden; /* Corta drasticamente qualquer logo que tente sair da tela */
+        max-width: 100vw; 
+        overflow: hidden; 
         margin: 20px auto;
     }
     .marcas-track {
-        gap: 30px; /* Aproxima as logos no celular */
+        gap: 30px; 
     }
 
     .marcas-track img {
-        height: 55px; /* Deixa as logos menores na tela do celular */
+        height: 55px; 
     }
 
     .btn {
-        margin-top: 30px; /* Diminui o espaçamento do botão no celular */
-        width: 100%; /* O botão fica do tamanho da tela, mais fácil de clicar */
+        margin-top: 30px; 
+        width: 100%; 
         text-align: center;
     }
 
-    /* Corrige os espaçamentos das Seções */
+    /* 🔵 CORREÇÃO DAS SEÇÕES:
+       Aumentamos o primeiro valor (padding-top) para dar espaço visual ao rolar o dedo */
     .empresa, .portfolio, .contato {
-        padding: 100px 0 60px 0; /* Menos espaço em branco no celular */
+        padding: 40px 0 40px 0; 
     }
 
-    /* Libera a altura dos textos nos cards para não cortar palavras */
+    /* Libera a altura dos textos nos cards */
     .card-content p {
         height: auto; 
         margin-bottom: 20px;
     }
-}
 
-@media (max-width: 768px) {
-    
+    /* 🎯 AJUSTE FINO DA ROLAGEM (CALIBRADO PARA O NOVO MENU FLUTUANTE)
+       Como o menu flutuante ocupa espaço, esses valores precisam ser maiores que 10px/20px */
     #empresa {
-        scroll-margin-top: 10px; /* Ajuste fino para o "Sobre a Empresa" */
+        scroll-margin-top: 60px; /* Empurra o "Sobre a Empresa" para baixo do menu */
     }
 
     #portfolio {
-        scroll-margin-top: 20px; /* Ajuste fino para o "Marcas Representadas" */
+        scroll-margin-top: 60px; /* Empurra o "Marcas Representadas" para baixo do menu */
     }
 
     #contato {
-        scroll-margin-top: 90px; /* Ajuste fino para o "Entre em Contato" */
+        scroll-margin-top: 60px; /* Empurra o "Entre em Contato" para baixo do menu */
     }
-
 }
