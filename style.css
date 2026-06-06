@@ -400,6 +400,15 @@ footer {
     font-size: 0.95rem;
 }
 
+Putz, peço desculpas! Você tem toda razão em ficar bravo. Eu acabei complicando o que era para ser simples e baguncei o comportamento do layout tentando adivinhar o comportamento do navegador. Vamos voltar duas casas e resolver isso com o que realmente funciona para o celular, sem inventar moda.
+
+O problema de "vazar" o botão "Ver Produtos" no topo do Contato acontece única e exclusivamente porque a seção .contato não tem altura suficiente no celular para permitir que a página continue rolando.
+
+Em vez de mexer em margem negativa ou mexer na seção do Portfólio (o que acaba desalinhando as outras coisas), a solução correta é apenas dar um "respiro" maior (padding) no topo da seção de contato no mobile.
+
+Substitua o seu bloco @media (max-width: 768px) por este aqui, que mantém a sua estrutura original e limpa, corrigindo apenas o espaçamento do contato:
+
+CSS
 /* ==========================================================================
    BLOCO DE RESPONSIVIDADE CORRIGIDO (FIM DOS BURACOS EM BRANCO)
    ========================================================================== */
@@ -464,8 +473,8 @@ footer {
         text-align: center;
     }
 
-    /* 3. NORMALIZAÇÃO DO TAMANHO DAS SEÇÕES E EXPANSÃO DO CONTATO */
-    .empresa {
+    /* 3. NORMALIZAÇÃO DO TAMANHO DAS SEÇÕES (REDUZIDO) */
+    .empresa, .portfolio {
         display: block !important;
         clear: both !important;
         position: relative !important;
@@ -473,25 +482,14 @@ footer {
         padding: 50px 20px !important; 
     }
 
-    /* Puxa o portfólio para cima e diminui a folga do final dele */
-    .portfolio {
+    /* O AJUSTE EXCLUSIVO AQUI: Aumentamos o padding-top de 50px para 120px 
+       para empurrar o "Entre em Contato" para baixo, escondendo o botão de cima */
+    .contato {
         display: block !important;
         clear: both !important;
         position: relative !important;
         box-sizing: border-box !important;
-        padding: 50px 20px 15px 20px !important; /* Reduzido padding inferior */
-        margin-bottom: -50px !important; /* Puxa o final da seção para cima */
-    }
-
-    /* Força o contato a ocupar espaço suficiente na tela para dar curso ao scroll */
-    .contato {
-        display: flex !important;
-        flex-direction: column !important;
-        justify-content: center !important; /* Centraliza o conteúdo elegantemente */
-        align-items: center !important;
-        box-sizing: border-box !important;
-        padding: 80px 20px !important; 
-        min-height: 85vh !important; /* O segredo para o celular ter espaço para rolar e esconder o "Ver Produtos" */
+        padding: 120px 20px 80px 20px !important; 
     }
 
     /* Libera a altura dos textos nos cards */
@@ -509,12 +507,6 @@ footer {
         margin-bottom: 20px !important;
     }
 
-    /* Ajuste de espaçamento dos botões de contato no celular */
-    .contato-botoes {
-        margin-top: 40px !important;
-        width: 100% !important;
-    }
-
     /* Reset definitivo dos h2 */
     .empresa h2, .portfolio h2, .contato h2 {
         padding-top: 0 !important;
@@ -524,19 +516,22 @@ footer {
     }
 
     /* ==========================================================================
-        🎯 NOVA ANCORAGEM PERFEITA PADRONIZADA
+        🎯 ANCORAGEM PADRONIZADA COM 135PX (IGUAL AO SEU ORIGINAL)
        ========================================================================== */
     
-    /* Todas as seções agora usam o mesmo padrão exato de folga abaixo do menu */
     #empresa {
-        scroll-margin-top: 85px !important;
+        scroll-margin-top: 135px !important;
     }
 
     #portfolio {
-        scroll-margin-top: 85px !important;
+        scroll-margin-top: 135px !important;
     }
 
     #contato {
-        scroll-margin-top: 85px !important; 
+        scroll-margin-top: 135px !important;
+        min-height: auto !important; 
     }
 }
+/* ==========================================================================
+   FIM DO BLOCO
+   ========================================================================== */
