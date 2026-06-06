@@ -445,3 +445,7 @@ footer {
         margin-bottom: 20px;
     }
 }
+/* Resolve o problema do menu cobrindo os títulos ao clicar nos links */
+section {
+    scroll-margin-top: 140px; /* Cria uma margem invisível no topo da seção apenas na rolagem do clique */
+}
