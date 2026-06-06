@@ -471,15 +471,15 @@ footer {
 
     /* Nova ancoragem limpa baseada no tamanho exato do seu cabeçalho */
     #empresa {
-        scroll-margin-top: 100px; /* Calibrado para alinhar igual ao portfolio */
+        scroll-margin-top: 60px; /* Calibrado para alinhar igual ao portfolio */
     }
 
     #portfolio {
-        scroll-margin-top: 100px; /* Mantém o alinhamento perfeito que você curtiu */
+        scroll-margin-top: 60px; /* Mantém o alinhamento perfeito que você curtiu */
     }
 
     #contato {
-        scroll-margin-top: 50px; /* Pára o menu exatamente acima do Entre em Contato */
+        scroll-margin-top: 10px; /* Pára o menu exatamente acima do Entre em Contato */
     }
 }
 /* ==========================================================================
