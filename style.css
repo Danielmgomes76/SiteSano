@@ -508,9 +508,11 @@ footer {
     }
 
     /* ==========================================================================
-        🎯 ANCORAGEM AJUSTADA PARA O CONTATO SUBIR E ENCAIXAR PERFEITO
+       🎯 NOVA ANCORAGEM PERFEITA (O SEGREDO PARA NÃO CORTAR)
        ========================================================================== */
     
+    /* Quando clicar nos links, o navegador vai parar exatamente 135px ANTES da seção,
+       escondendo o botão da seção anterior perfeitamente atrás do menu branco */
     #empresa {
         scroll-margin-top: 135px !important;
     }
@@ -519,17 +521,13 @@ footer {
         scroll-margin-top: 135px !important;
     }
 
-    /* Fizemos o contato subir reduzindo o scroll-margin e tirando o excesso de padding */
-    .contato {
-        padding: 20px 20px 50px 20px !important; /* Diminuiu em cima para o conteúdo subir */
-    }
-
     #contato {
-        scroll-margin-top: 90px !important; /* Valor menor para a página rolar mais e o bloco subir */
+        /* Mudado de -120px para 135px positivos para não sobrepor o portfólio */
+        scroll-margin-top: 135px !important; 
         min-height: auto !important; 
         clear: both !important;
     }
-}    
+}
 /* ==========================================================================
    FIM DO BLOCO
    ========================================================================== */
