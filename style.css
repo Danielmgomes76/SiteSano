@@ -488,9 +488,10 @@ footer {
     }
 
     #contato {
-        padding-top: 145px !important; 
-        /* 👇 Força o contato a ter altura suficiente no celular para a página conseguir rolar até o final */
-        min-height: 80vh !important; 
+        /* Aumentamos consideravelmente o espaço no topo para empurrar o "Ver Produtos" para cima da tela */
+        padding-top: 240px !important; 
+        /* Mantém o espaço extra no fundo da página */
+        min-height: 85vh !important; 
         display: flex !important;
         flex-direction: column !important;
         justify-content: flex-start !important;
