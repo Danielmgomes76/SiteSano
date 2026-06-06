@@ -376,7 +376,7 @@ footer {
 }
 
 /* ==========================================================================
-   BLOCO UNIFICADO DE RESPONSIVIDADE PARA CELULAR
+   BLOCO UNIFICADO DE RESPONSIVIDADE PARA CELULAR (COPIE E COLE TUDO ABAIXO)
    ========================================================================== */
 @media (max-width: 768px) {
     
@@ -386,7 +386,6 @@ footer {
         left: 0;
     }
 
-    /* 👇 Altere o 'padding' e o 'gap' abaixo se quiser deixar a barra do topo mais fina ou mais grossa */
     .header-content {
         flex-direction: column;
         gap: 5px; 
@@ -438,11 +437,12 @@ footer {
         text-align: center;
     }
 
-    /* 3. ISOLAMENTO DAS SEÇÕES */
+    /* 3. ISOLAMENTO DAS SEÇÕES (Adicionado overflow hidden para esconder o vazamento do Portfólio) */
     .empresa, .portfolio, .contato {
         display: block;
-        clear: both; /* Impede que elementos de cima invadam ou cortem a seção */
+        clear: both; 
         position: relative;
+        overflow: hidden; /* 🔥 ISSO VAI ESCONDER A COZINHA LEVE E O BOTÃO NO CONTATO! */
         padding: 40px 0 !important; 
     }
 
@@ -456,20 +456,29 @@ footer {
        🎯 ÁREA DE AJUSTE DOS TÍTULOS (SÓ MEXER NOS NÚMEROS ABAIXO SE PRECISAR)
        ========================================================================== */
 
-    /* 🏢 SOBRE A EMPRESA
-       Se o título ainda ficar escondido, aumente os valores (ex: 170px e -170px) */
+    /* 🏢 SOBRE A EMPRESA 
+       (Diminuído para 110px para o título SUBIR um pouco mais na tela) */
     .empresa h2 {
         display: block;
-        padding-top: 150px !important; 
-        margin-top: -150px !important;
+        padding-top: 110px !important; 
+        margin-top: -110px !important;
     }
 
-    /* 💼 MARCAS REPRESENTADAS (Você disse que este já saiu correto!) */
+    /* 💼 MARCAS REPRESENTADAS (Mantido pois você disse que ficou perfeito) */
     .portfolio h2 {
         display: block;
         padding-top: 140px !important; 
         margin-top: -140px !important;
     }
 
-    /* 📞 ENTRE EM CONTATO
-       Se o botão "Ver Produtos" anterior ainda tentar cobrir o título, aument
+    /* 📞 ENTRE EM CONTATO 
+       (Mantido alto para compensar a rolagem) */
+    .contato h2 {
+        display: block;
+        padding-top: 160px !important; 
+        margin-top: -160px !important;
+    }
+}
+/* ==========================================================================
+   FIM DO BLOCO DE RESPONSIVIDADE
+   ========================================================================== */
