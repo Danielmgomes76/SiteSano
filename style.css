@@ -517,8 +517,13 @@ footer {
         scroll-margin-top: 85px !important; /* Puxa "Marcas Representadas" mais para cima */
     }
     
+    /* Forçando a quebra e isolamento da seção de contato no mobile */
     #contato {
-        scroll-margin-top: 150px !important; /* Mantém o padrão alinhado para todos */
+        scroll-margin-top: 0 !important; /* Reseta o scroll margin para usar o truque do padding */
+        padding-top: 140px !important;   /* Cria um espaço seguro invisível no topo da seção */
+        margin-top: -60px !important;    /* Ajusta a aproximação para não criar um buraco em branco */
         min-height: auto !important;
+        display: block !important;
+        clear: both !important;
     }
 }
