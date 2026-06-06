@@ -1,519 +1,207 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sano Representações</title>
 
-html {
-    scroll-behavior: smooth;
-    overflow-x: hidden; /* Impede o site de vazar para os lados */
-}
+    <link rel="shortcut icon" href="imagens/Icone.ico" type="image/x-icon">
 
-body {
-    font-family: 'Poppins', sans-serif;
-    color: #333;
-    background-color: #ffffff;
-    overflow-x: hidden; /* Garante que nada quebre a largura da tela */
-    width: 100%;
-}
+    <link rel="stylesheet" href="style.css">
 
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: auto;
-}
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
 
-/* HEADER */
-header {
-    background: #ffffff;
-    box-shadow: 0 2px 10px rgba(0,0,0,.08);
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0; /* Adicionado para garantir o alinhamento inicial */
-    z-index: 1000;
-}
+    <header>
+        <div class="container header-content">
 
-.header-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 0;
-}
+            <div class="logo">
+                <img src="Imagens/Logo-Original.png" alt="Logo">
+            </div>
 
-.logo img {
-    height: 85px;
-    object-fit: contain;
-}
+            <nav>
+                <ul>
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#empresa">Empresa</a></li>
+                    <li><a href="#portfolio">Portfólio</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
 
-nav ul {
-    display: flex;
-    list-style: none;
-    gap: 30px;
-}
+        </div>
+    </header>
 
-nav a {
-    position: relative;
-    font-size: 1.1rem;
-    text-decoration: none;
-    color: #5A46A0;
-    font-weight: 600;
-    transition: .3s;
-}
+    <section id="inicio" class="banner">
+        <div class="overlay">
+            <div class="banner-text">
+                <h1>Há <span class="destaque-banner">mais de 10 anos</span><br>
+                conectando as melhores marcas<br>saudáveis ao mercado cearense.</h1>
 
-nav a:hover {
-    color: #A6C80A;
-}
+                <div class="marcas-track">
+                    <img src="Imagens/Mano Velho Logo 2.jpg" alt="Marca 1">
+                    <img src="Imagens/Imagem Logo Grano Square.png" alt="Marca 2">
+                    <img src="Imagens/kiro Logo.jpg" alt="Marca 3">
+                    <img src="Imagens/Tao Kombucha.png" alt="Marca 4">
+                    <img src="Imagens/Logo Fhon.png" alt="Marca 5">
+                    <img src="Imagens/Legumê.png" alt="Marca 6">
+                    <img src="Imagens/Cozinha Leve.png" alt="Marca 7">
+                    <img src="Imagens/win stage.png" alt="Marca 8">
 
-nav a::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -5px;
-    width: 0;
-    height: 3px;
-    background: #5A46A0;
-    transition: 0.3s;
-}
+                    <img src="Imagens/Mano Velho Logo 2.jpg" alt="Marca 1">
+                    <img src="Imagens/Imagem Logo Grano Square.png" alt="Marca 2">
+                    <img src="Imagens/kiro Logo.jpg" alt="Marca 3">
+                    <img src="Imagens/Tao Kombucha.png" alt="Marca 4">
+                    <img src="Imagens/Logo Fhon.png" alt="Marca 5">
+                    <img src="Imagens/Legumê.png" alt="Marca 6">
+                    <img src="Imagens/Cozinha Leve.png" alt="Marca 7">
+                    <img src="Imagens/win stage.png" alt="Marca 8">
+                </div>
+            </div>
 
-nav a:hover::after {
-    width: 100%;
-}
+            <a href="#portfolio" class="btn">Conheça Nossas Marcas</a>
+        </div>
+    </section>
 
-/* BANNER */
-.banner {
-    background: url('Imagens/banner.jpg') center center/cover;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;          
-}
+    <section id="empresa" class="empresa">
+        <div class="container">
+            <h2>Sobre a Empresa</h2>
+            <div class="empresa-grid">
+                <div class="empresa-card">
+                    <h3>Nossa História</h3>
+                    <p>
+                        Há mais de 10 anos atuando no mercado cearense, a Sano Representações conecta marcas saudáveis, orgânicas e naturais aos principais pontos de venda da região, construindo relações sólidas entre fabricantes, varejistas e consumidores.
+                    </p>
+                </div>
 
-.overlay {
-    background: linear-gradient(
-        180deg,
-        rgba(90,70,160,0.90) 0%,
-        rgba(255,255,255,0.95) 60%,
-        rgba(166,200,10,0.25) 100%
-    );
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 120px 20px 60px 20px;
-    width: 100%;
-    min-height: 100vh;
-    text-align: center;   
-}
+                <div class="empresa-card">
+                    <h3>Missão e Visão</h3>
+                    <p>
+                        Nossa missão é representar marcas comprometidas com saúde, qualidade e sustentabilidade. Nossa visão é ser referência no Nordeste na distribuição e representação de produtos que promovam bem-estar e alimentação consciente.
+                    </p>
+                </div>
 
-.banner-text {
-    max-width: 1200px;
-    width: 100%;
-    text-align: center;
-    color: #222222;
-}
+                <div class="empresa-card">
+                    <h3>Nossos Diferenciais</h3>
+                    <p>
+                        Atendimento próximo, conhecimento do mercado, ampla rede de relacionamento comercial e compromisso com resultados fazem da Sano uma parceira estratégica para o crescimento das marcas representadas.
+                    </p>
+                </div>
+            </div>
+        </div>   
+    </section>
 
-.banner-text h1 {
-    font-size: clamp(2.2rem, 4vw, 4rem);
-    line-height: 1.3;
-    font-weight: 700;
-    color: #463878;
-    max-width: 1000px;
-    margin: 40px auto 40px;
-}
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <h2>Marcas Representadas</h2>
+            <div class="cards">
+                
+                <div class="card mano-velho">
+                    <img src="Imagens/Mano Velho Logo 2.jpg" alt="Mano Velho">
+                    <div class="card-content">
+                        <div class="empresa-faixa faixa-mano-velho">Mano Velho</div>
+                        <p>
+                            Somos pioneiros em cultivar alimentos Orgânicos e Não Transgênicos no Brasil. Há mais de 15 anos produzimos e selecionamos o melhor da terra para sua família.
+                        </p>
+                        <a href="https://www.manovelho.com/produtos" class="btn-card">Ver Produtos</a>
+                    </div>
+                </div>
 
-.banner-text span {
-    color: #ae8817;
-}
+                <div class="card grano-square">
+                    <img src="Imagens/Imagem Logo Grano Square.png" alt="Grano Square">
+                    <div class="card-content">
+                        <div class="empresa-faixa faixa-grano-square">Grano Square</div>
+                        <p>
+                            Granolas Premium diferenciadas que trazem uma experiência de sabor, saúde e muita crocância.
+                        </p>
+                        <a href="https://www.granosquare.com.br" class="btn-card">Ver Produtos</a>
+                    </div>
+                </div>
 
-/* CARROSSEL INFINITO DE LOGOS */
-.marcas-slider {
-    width: 100%;
-    overflow: hidden;
-    margin: 40px auto;
-    padding: 20px 0;
-    position: relative;
-}
+                <div class="card kiro">
+                    <img src="Imagens/kiro Logo.jpg" alt="Kiro">
+                    <div class="card-content">
+                        <div class="empresa-faixa faixa-kiro">Kiro Switchel</div>
+                        <p>
+                            Bebidas naturais, funcionais e surpreendentes, trazendo inovação e refrescância saudável para o mercado local.
+                        </p>
+                        <a href="https://bebakiro.com.br" class="btn-card">Ver Produtos</a>
+                    </div>
+                </div>
 
-.marcas-track {
-    display: flex;
-    align-items: center;
-    gap: 60px;
-    width: max-content;
-    animation: scrollMarcas 30s linear infinite;
-}
+                <div class="card tao-kombucha">
+                    <img src="Imagens/Tao Kombucha.png" alt="Tao Kombucha">
+                    <div class="card-content">
+                        <div class="empresa-faixa faixa-tao">Tao Kombucha</div>
+                        <p>
+                            Kombuchas artesanais cheias de vida e sabor, fermentadas com ingredientes selecionados para o seu bem-estar.
+                        </p>
+                       <a href="https://www.taokombucha.com.br" class="btn-card">Ver Produtos</a>
+                    </div>
+                </div>
 
-.marcas-track img {
-    height: 75px;
-    width: auto;
-    object-fit: contain;
-    transition: .3s;
-    filter: grayscale(20%);
-}
+                 <div class="card legurme">
+                    <img src="Imagens/Legumê.png" alt="Legurmê">
+                    <div class="card-content">
+                        <div class="empresa-faixa faixa-legurme">Legurmê</div>
+                        <p>
+                            Produtos com sabor surpreendente. Na Legurmê, acreditamos que o prazer de comer está entrelaçado com a origem dos ingredientes e o cuidado com a saúde.
+                        </p>
+                        <a href="https://www.legurme.com.br" class="btn-card">Ver Produtos</a>
+                    </div>
+                </div>
+                
+                <div class="card winstage">
+                    <img src="Imagens/win stage.png" alt="Winstage">
+                    <div class="card-content">
+                        <div class="empresa-faixa faixa-winstage">Winstage</div>
+                        <p>
+                            Ingredientes reais. E nada mais! A WinStage foi criada a partir do desejo de levar para a alimentação de todos os brasileiros uma refeição saudável e prática.
+                        </p>
+                        <a href="https://winstage.com.br" class="btn-card">Ver Produtos</a>
+                    </div>
+                </div>
 
-.marcas-track img:hover {
-    filter: grayscale(0%);
-    transform: scale(1.05);
-}
+                <div class="card fhon">
+                    <img src="Imagens/Logo Fhon.png" alt="Fhom">
+                    <div class="card-content">
+                        <div class="empresa-faixa faixa-fhon">Fhom</div>
+                        <p>
+                            Alimentos leves, inclusivos e pensados para o bem-estar, sem açúcar, lactose ou glúten.
+                        </p>
+                        <a href="https://fhom.com.br" class="btn-card">Ver Produtos</a>
+                    </div>
+                </div>
 
-@keyframes scrollMarcas {
-    from { transform: translateX(0); }
-    to { transform: translateX(-50%); }
-}
+                <div class="card cozinha-leve">
+                    <img src="Imagens/Cozinha Leve.png" alt="cozinha-leve">
+                    <div class="card-content">
+                        <div class="empresa-faixa faixa-cozinha-leve">Cozinha Leve</div>
+                        <p>
+                            Cozinha Leve é o encontro entre prazer e bem-estar, criando alimentos que respeitam sua saúde e estilo de vida, sem abrir mão do sabor e da qualidade.
+                        </p>
+                        <a href="https://www.instagram.com/cozinhaleve" class="btn-card">Ver Produtos</a>
+                    </div>
+                </div>
 
-.btn {
-    background: #A6C80A;
-    color: #fff;
-    padding: 15px 35px;
-    border-radius: 10px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: .3s;
-    display: inline-block;
-    margin-top: 50px; /* Aumentamos o espaço aqui */
-    box-shadow: 0 4px 15px rgba(166, 200, 10, 0.3);
-}
-
-.btn:hover {
-    background: #8CAA08;
-    transform: translateY(-2px);
-}
-
-/* EMPRESA */
-.empresa {
-    padding: 130px 0 100px 0; 
-    background: #ecf8d3;
-}
-
-.empresa h2 {
-    text-align: center;
-    margin-bottom: 60px;
-    color: #5A46A0;
-    font-size: 2.2rem;
-}
-
-.empresa-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-    justify-content: center;
-}
-
-.empresa-card {
-    background-color: #ffffff;
-    border-radius: 12px;
-    width: 100%;
-    max-width: 360px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); 
-    transition: all 0.3s ease;
-    padding: 0 !important; 
-    overflow: hidden; 
-    display: flex;
-    flex-direction: column;
-    margin: 0 auto;
-}
-
-/* MICRO-INTERAÇÃO AO PASSAR O MOUSE */
-.empresa-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 24px rgba(76, 59, 136, 0.12);
-}
-
-/* FAIXA COLORIDA ROXA COM O NOME EM BRANCO */
-.empresa-card h3 {
-    background-color: #4C3B88 !important; /* O roxo da Sano */
-    color: #ffffff !important; /* Texto Branco */
-    margin: 0 !important; 
-    padding: 22px 15px !important; 
-    font-size: 1.3rem !important;
-    font-weight: 700 !important;
-    text-align: center !important; 
-    width: 100% !important;
-    box-sizing: border-box !important;
-}
-
-/* AJUSTE EXCLUSIVO DO TEXTO INTERNO DO CARD DA EMPRESA */
-.empresa-card p {
-    font-size: 0.95rem !important;
-    line-height: 1.65 !important;
-    color: #444444 !important;
-    text-align: left !important; 
-    padding: 25px 24px 30px 24px !important; 
-    margin: 0 !important;
-}
-
-/* PORTFÓLIO & CARDS DE MARCAS */
-.portfolio {
-    background: linear-gradient(180deg, #ecf8d3 0%, #ffffff 100%); 
-    padding: 140px 0 100px 0;
-}
-
-.portfolio h2 {
-    text-align: center;
-    margin-bottom:30px;
-    color: #5A46A0;
-    font-size: 2.2rem;
-}
-
-.cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-    justify-content: center;
-}
-
-.card {
-    background-color: #ffffff;
-    border-radius: 12px; 
-    padding: 30px 24px;
-    width: 100%;
-    max-width: 360px;
-    border-top: 3px solid #e2e8f0; 
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03); 
-    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-    position: relative;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.card:hover {
-    transform: translateY(-4px); 
-    border-top-color: #4C3B88; 
-    box-shadow: 0 12px 20px rgba(76, 59, 136, 0.08); 
-}
-
-.card img {
-    height: 90px;
-    width: auto;
-    max-width: 100%;
-    object-fit: contain;
-    margin-bottom: 15px;
-}
-
-.card-content {
-    width: 100%;
-    text-align: center;
-}
-
-/* Estilização das Faixas das Marcas */
-.empresa-faixa {
-    width: 100%;
-    color: #ffffff;
-    font-size: 1.3rem;
-    font-weight: 700;
-    text-align: center;
-    padding: 12px 10px;
-    margin: 15px 0;
-    border-radius: 6px;
-    display: block;
-}
-
-.faixa-mano-velho { background: #2F6F57; }
-.faixa-grano-square { background: #000000; }
-.faixa-kiro { background: #930093; }
-.faixa-tao { background: #7A005A; }
-.faixa-legurme { background: #014d01; }
-.faixa-winstage { background: #8cc3fe; }
-.faixa-fhon { background: #F5A623; }
-.faixa-cozinha-leve { background: #B91C1C; }
-
-.card-content p {
-    text-align: justify;
-    line-height: 1.6;
-    color: #555;
-    margin-bottom: 20px;
-    font-size: 0.95rem;
-    height: 100px; 
-    overflow: hidden;
-}
-
-.btn-card {
-    display: inline-block;
-    text-decoration: none;
-    background: #5A46A0;
-    color: white;
-    padding: 12px 25px;
-    border-radius: 8px;
-    font-weight: 500;
-    transition: .3s;
-    width: 100%;
-}
-
-.btn-card:hover {
-    background: #A6C80A;
-}
-
-/* CONTATO */
-.contato {
-    padding: 100px 0;
-    text-align: center;
-    background: #f8fafc;
-}
-
-.contato h2 {
-    color: #5A46A0;
-    font-size: 2.2rem;
-    margin-bottom: 15px;
-}
-
-.contato p {
-    color: #666;
-    font-size: 1.1rem;
-}
-
-.contato-botoes {
-    margin-top: 40px;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-.whatsapp, .email {
-    text-decoration: none;
-    color: white;
-    padding: 16px 35px;
-    border-radius: 8px;
-    font-weight: 600;
-    font-size: 1.1rem;
-    transition: .3s;
-    display: flex;
-    align-items: center;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-}
-
-.whatsapp { background: #25d366; }
-.whatsapp:hover { background: #1ebd58; transform: translateY(-2px); }
-
-.email { background: #2563eb; }
-.email:hover { background: #1d4ed8; transform: translateY(-2px); }
-
-/* FOOTER */
-footer {
-    background: #0f172a;
-    color: #94a3b8;
-    text-align: center;
-    padding: 30px 20px;
-    font-size: 0.95rem;
-}
-
-/* ==========================================================================
-    BLOCO DE RESPONSIVIDADE ADAPTADO E ARRUMADO PARA SMARTPHONES
-   ========================================================================== */
-@media (max-width: 768px) {
+            </div>
+        </div>
+    </section>
     
-    /* 1. CABEÇALHO MOBILE */
-    header {
-        width: 100vw; 
-        left: 0;
-        position: fixed;
-        z-index: 9999;
-    }
+    <section id="contato" class="contato">
+        <div class="container">
+            <h2>Entre em Contato</h2>
+            <p>Estamos prontos para atender você.</p>
+            <div class="contato-botoes">
+                <a href="https://wa.me/5599999999999" target="_blank" rel="noopener noreferrer" class="btn-contato whatsapp">WhatsApp</a>
+                <a href="mailto:contato@suaempresa.com.br" class="btn-contato email">E-mail</a>
+            </div>
+        </div>
+    </section>
 
-    .header-content {
-        flex-direction: column;
-        gap: 5px; 
-        padding: 10px 0; 
-        width: 100%;
-    }
+    <footer>
+        <p>© 2026 Sano Representações - Todos os direitos reservados.</p>
+    </footer>
 
-    .logo img {
-        height: 45px; 
-        display: block;
-        margin: 0 auto;
-    }
-
-    nav {
-        width: 100%;
-    }
-
-    nav ul {
-        display: flex;
-        justify-content: center; 
-        gap: 12px; 
-        padding: 0;
-        width: 100%;
-    }
-    
-    nav a {
-        font-size: 0.9rem; 
-    }
-
-    /* 2. CARROSSEL MOBILE */
-    .marcas-slider {
-        width: 100%;
-        max-width: 100vw; 
-        overflow: hidden; 
-        margin: 20px auto;
-    }
-    
-    .marcas-track {
-        gap: 30px; 
-    }
-
-    .marcas-track img {
-        height: 55px; 
-    }
-
-    .btn {
-        margin-top: 30px; 
-        width: 100%; 
-        text-align: center;
-    }
-
-    /* 3. SEÇÕES COM REAPROVEITAMENTO DAS MARGENS LATERAIS */
-    .empresa, .portfolio, .contato {
-        display: block !important;
-        clear: both !important;
-        position: relative !important;
-        box-sizing: border-box !important;
-        padding: 60px 0 !important; /* Espaçamento vertical equilibrado */
-    }
-
-    /* Ajuste estrutural do Grid da Empresa e Portfólio no Celular */
-    .empresa-grid, .cards {
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important;
-        gap: 25px !important;
-        width: 100% !important;
-        padding: 0 5% !important; /* Alinha a tabulação criando margens perfeitas na tela */
-    }
-
-    /* Ajuste de Cards individuais */
-    .empresa-card, .card {
-        max-width: 100% !important;
-        width: 100% !important;
-    }
-
-    /* Libera e normaliza o preenchimento dos parágrafos dos cards */
-    .card-content p {
-        height: auto !important; 
-        margin-bottom: 20px !important;
-    }
-
-    .empresa-card p {
-        text-align: left !important;
-        padding: 20px 18px 25px 18px !important;
-    }
-
-    /* Reset de Títulos */
-    .empresa h2, .portfolio h2, .contato h2 {
-        padding-top: 0 !important;
-        margin-top: 0 !important;
-        margin-bottom: 25px !important;
-        text-align: center !important;
-    }
-
-    /* Ancoragem fluida dos links */
-    #empresa, #portfolio, #contato {
-        scroll-margin-top: 135px !important;
-    }
-    
-    #contato {
-        min-height: auto !important;
-    }
-}
+</body>
+</html>
