@@ -451,7 +451,7 @@ footer {
     /* 🎯 AJUSTE FINO DA ROLAGEM (CALIBRADO PARA O NOVO MENU FLUTUANTE)
        Como o menu flutuante ocupa espaço, esses valores precisam ser maiores que 10px/20px */
     #empresa {
-        scroll-margin-top: 60px; /* Empurra o "Sobre a Empresa" para baixo do menu */
+        scroll-margin-top: 80px; /* Empurra o "Sobre a Empresa" para baixo do menu */
     }
 
     #portfolio {
@@ -459,6 +459,6 @@ footer {
     }
 
     #contato {
-        scroll-margin-top: 60px; /* Empurra o "Entre em Contato" para baixo do menu */
+        scroll-margin-top: 10px; /* Empurra o "Entre em Contato" para baixo do menu */
     }
 }
