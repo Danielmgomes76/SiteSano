@@ -504,15 +504,15 @@ footer {
     /* Quando clicar nos links, o navegador vai parar exatamente 135px ANTES da seção,
        escondendo o botão da seção anterior perfeitamente atrás do menu branco */
     #empresa {
-        scroll-margin-top: 120px !important;
+        scroll-margin-top: 140px !important;
     }
 
     #portfolio {
-        scroll-margin-top: 120px !important;
+        scroll-margin-top: 140px !important;
     }
 
     #contato {
-        scroll-margin-top: 120px !important;
+        scroll-margin-top: 140px !important;
         min-height: auto !important; /* Remove o tamanho gigante anterior */
     }
 }
