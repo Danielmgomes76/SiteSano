@@ -488,10 +488,14 @@ footer {
     }
 
     #contato {
-        padding-top: 145px !important; /* Empurra o "Entre em Contato" bem para longe dos cards de cima */
-        padding-bottom: 60px !important;
+        padding-top: 145px !important; 
+        /* 👇 Força o contato a ter altura suficiente no celular para a página conseguir rolar até o final */
+        min-height: 80vh !important; 
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: flex-start !important;
     }
-}
+}    
 /* ==========================================================================
    FIM DO BLOCO
    ========================================================================== */
