@@ -16,7 +16,6 @@ body {
     overflow-x: hidden; /* Garante que nada quebre a largura da tela */
     width: 100%;
 }
-
 .container {
     width: 90%;
     max-width: 1200px;
@@ -182,7 +181,7 @@ nav a:hover::after {
 
 /* EMPRESA */
 .empresa {
-    padding: 130px 0 100px 0; 
+    padding: 130px 0 100px 0; /* Aumentamos o espaçamento no topo de 100px para 140px */
     background: #ecf8d3;
 }
 
@@ -208,41 +207,42 @@ nav a:hover::after {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); 
     transition: all 0.3s ease;
     
-    /* Zera o preenchimento estrutural externo para que a faixa colha nas laterais */
+    /* 🔥 Remove qualquer padding interno que o card antigo tinha para a faixa poder encostar nas bordas */
     padding: 0 !important; 
-    overflow: hidden; /* Mantém os cantos arredondados na faixa */
+    overflow: hidden; /* Garante que os cantos da faixa fiquem arredondados junto com o card */
     
     display: flex;
     flex-direction: column;
 }
-
 /* MICRO-INTERAÇÃO AO PASSAR O MOUSE */
 .empresa-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 12px 24px rgba(76, 59, 136, 0.12);
 }
 
-/* FAIXA COLORIDA ROXA COM O NOME EM BRANCO */
 .empresa-card h3 {
-    background-color: #4C3B88 !important; /* O roxo da Sano */
+    background-color: #4C3B88; /* O roxo da Sano */
     color: #ffffff !important; /* Texto Branco */
-    margin: 0 !important; 
-    padding: 22px 15px !important; /* Respiro vertical interno da faixa */
-    font-size: 1.3rem !important;
-    font-weight: 700 !important;
-    text-align: center !important; /* Centraliza o nome */
-    width: 100% !important;
-    box-sizing: border-box !important;
+    margin: 0 !important; /* Zera as margens para não criar espaços vazios */
+    padding: 22px 15px !important; /* Dá a altura e o respiro perfeito para a faixa */
+    font-size: 1.3rem;
+    font-weight: 700;
+    text-align: center; /* Centraliza o nome na faixa */
+    width: 100%;
+    box-sizing: border-box;
 }
 
-/* AJUSTE EXCLUSIVO DO TEXTO INTERNO DO CARD DA EMPRESA */
+/* AJUSTE DO TEXTO PARA NÃO FICAR COLADO */
 .empresa-card p {
-    font-size: 0.95rem !important;
-    line-height: 1.65 !important;
-    color: #444444 !important;
-    text-align: left !important; /* Alinhamento correto que elimina os buracos */
-    padding: 25px 24px 30px 24px !important; /* Espaçamento interno em relação às bordas */
-    margin: 0 !important;
+    font-size: 0.95rem;
+    line-height: 1.65;
+    color: #444444;
+    text-align: left; /* Alinhado à esquerda resolve os buracos brancos do print */
+}
+.empresa-card .card-content, 
+.empresa-card p {
+    padding: 25px 24px !important; /* Devolve o espaço interno apenas para o texto */
+    margin: 0;
 }
 
 /* PORTFÓLIO & CARDS DE MARCAS */
@@ -411,11 +411,11 @@ footer {
 }
 
 /* ==========================================================================
-   BLOCO DE RESPONSIVIDADE CORRIGIDO (FIM DOS BURACOS EM BRANCO)
+    BLOCO DE RESPONSIVIDADE ADAPTADO E ARRUMADO PARA SMARTPHONES
    ========================================================================== */
 @media (max-width: 768px) {
     
-    /* 1. AJUSTES DO CABEÇALHO (HEADER) */
+    /* 1. CABEÇALHO MOBILE */
     header {
         width: 100vw; 
         left: 0;
@@ -452,7 +452,7 @@ footer {
         font-size: 0.9rem; 
     }
 
-    /* 2. BLINDAGEM DO CARROSSEL (BANNER) */
+    /* 2. CARROSSEL MOBILE */
     .marcas-slider {
         width: 100%;
         max-width: 100vw; 
@@ -474,32 +474,43 @@ footer {
         text-align: center;
     }
 
-    /* 3. NORMALIZAÇÃO DO TAMANHO DAS SEÇÕES (REDUZIDO) */
+    /* 3. SEÇÕES COM REAPROVEITAMENTO DAS MARGENS LATERAIS */
     .empresa, .portfolio, .contato {
         display: block !important;
         clear: both !important;
         position: relative !important;
         box-sizing: border-box !important;
-        /* Remove os paddings gigantes e deixa um espaçamento interno padrão e limpo */
-        padding: 50px 20px !important; 
+        padding: 60px 0 !important; /* Espaçamento vertical equilibrado */
     }
 
-    /* Libera a altura dos textos nos cards */
+    /* Ajuste estrutural do Grid da Empresa e Portfólio no Celular */
+    .empresa-grid, .cards {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 25px !important;
+        width: 100% !important;
+        padding: 0 5% !important; /* Alinha a tabulação criando margens perfeitas na tela */
+    }
+
+    /* Ajuste de Cards individuais */
+    .empresa-card, .card {
+        max-width: 100% !important;
+        width: 100% !important;
+    }
+
+    /* Libera e normaliza o preenchimento dos parágrafos dos cards */
     .card-content p {
         height: auto !important; 
         margin-bottom: 20px !important;
     }
 
-    /* Garante que o container de cards não quebre o layout */
-    .portfolio .cards {
-        display: flex !important;
-        flex-direction: column !important;
-        gap: 25px !important;
-        width: 100% !important;
-        margin-bottom: 20px !important;
+    .empresa-card p {
+        text-align: left !important;
+        padding: 20px 18px 25px 18px !important;
     }
 
-    /* Reset definitivo dos h2 */
+    /* Reset de Títulos */
     .empresa h2, .portfolio h2, .contato h2 {
         padding-top: 0 !important;
         margin-top: 0 !important;
@@ -507,25 +518,17 @@ footer {
         text-align: center !important;
     }
 
-    /* ==========================================================================
-       🎯 NOVA ANCORAGEM PERFEITA (O SEGREDO PARA NÃO CORTAR)
-       ========================================================================== */
-    
-    /* Quando clicar nos links, o navegador vai parar exatamente 135px ANTES da seção,
-       escondendo o botão da seção anterior perfeitamente atrás do menu branco */
+    /* Ancoragem fluida dos links - Puxando os títulos mais para cima */
     #empresa {
-        scroll-margin-top: 135px !important;
+        scroll-margin-top: 85px !important; /* Puxa "Sobre a Empresa" mais para cima */
     }
 
     #portfolio {
-        scroll-margin-top: 135px !important;
+        scroll-margin-top: 85px !important; /* Puxa "Marcas Representadas" mais para cima */
     }
-
+    
     #contato {
-        scroll-margin-top: 135px !important;
-        min-height: auto !important; /* Remove o tamanho gigante anterior */
+        scroll-margin-top: 85px !important; /* Mantém o padrão alinhado para todos */
+        min-height: auto !important;
     }
 }
-/* ==========================================================================
-   FIM DO BLOCO
-   ========================================================================== */
