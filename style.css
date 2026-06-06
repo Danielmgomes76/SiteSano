@@ -352,7 +352,7 @@ nav a:hover::after {
         clear: both !important;
         position: relative !important;
         box-sizing: border-box !important;
-        padding: 90px 20px 120px 20px !important; /* Mais espaçamento em cima e embaixo */
+        padding: 120px 20px 120px 20px !important; /* Mais espaçamento em cima e embaixo */
     }
 
 .contato h2 {
