@@ -522,8 +522,10 @@ footer {
     }
 
     #contato {
-        scroll-margin-top: -120px !important;
-        min-height: auto !important; /* Remove o tamanho gigante anterior */
+        /* Mudado de -120px para 135px positivos para não sobrepor o portfólio */
+        scroll-margin-top: 135px !important; 
+        min-height: auto !important; 
+        clear: both !important;
     }
 }
 /* ==========================================================================
