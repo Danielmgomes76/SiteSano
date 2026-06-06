@@ -376,7 +376,7 @@ footer {
 }
 
 /* ==========================================================================
-   BLOCO UNIFICADO DE RESPONSIVIDADE PARA CELULAR (COPIE E COLE TUDO ABAIXO)
+   BLOCO UNIFICADO E CORRIGIDO DE RESPONSIVIDADE PARA CELULAR
    ========================================================================== */
 @media (max-width: 768px) {
     
@@ -384,6 +384,8 @@ footer {
     header {
         width: 100vw; 
         left: 0;
+        position: fixed; /* Garante o comportamento fixo */
+        z-index: 9999;
     }
 
     .header-content {
@@ -437,13 +439,18 @@ footer {
         text-align: center;
     }
 
-    /* 3. ISOLAMENTO DAS SEÇÕES (Adicionado overflow hidden para esconder o vazamento do Portfólio) */
+    /* 3. RESPIRO E ISOLAMENTO DAS SEÇÕES */
     .empresa, .portfolio, .contato {
         display: block;
         clear: both; 
         position: relative;
-        overflow: hidden; /* 🔥 ISSO VAI ESCONDER A COZINHA LEVE E O BOTÃO NO CONTATO! */
-        padding: 40px 0 !important; 
+        padding: 60px 0 !important; /* Dá um respiro saudável entre os blocos */
+    }
+
+    /* 🔥 RESOLVE O BUG DO BOTÃO DA COZINHA LEVE:
+       Dá uma folga no fundo do portfolio para o card caber inteiro sem invadir o contato */
+    .portfolio {
+        padding-bottom: 120px !important; 
     }
 
     /* 4. LIBERAÇÃO DOS TEXTOS DOS CARDS */
@@ -453,32 +460,28 @@ footer {
     }
 
     /* ==========================================================================
-       🎯 ÁREA DE AJUSTE DOS TÍTULOS (SÓ MEXER NOS NÚMEROS ABAIXO SE PRECISAR)
+       🎯 AJUSTE DE ALINHAMENTO DA ROLAGEM (LIMPO E PRECISO)
        ========================================================================== */
-
-    /* 🏢 SOBRE A EMPRESA 
-       (Diminuído para 110px para o título SUBIR um pouco mais na tela) */
-    .empresa h2 {
-        display: block;
-        padding-top: 110px !important; 
-        margin-top: -110px !important;
+    
+    /* Reseta os títulos h2 removendo o truque antigo que causava sobreposição */
+    .empresa h2, .portfolio h2, .contato h2 {
+        padding-top: 0 !important;
+        margin-top: 0 !important;
     }
 
-    /* 💼 MARCAS REPRESENTADAS (Mantido pois você disse que ficou perfeito) */
-    .portfolio h2 {
-        display: block;
-        padding-top: 140px !important; 
-        margin-top: -140px !important;
+    /* Nova ancoragem limpa baseada no tamanho exato do seu cabeçalho */
+    #empresa {
+        scroll-margin-top: 140px; /* Calibrado para alinhar igual ao portfolio */
     }
 
-    /* 📞 ENTRE EM CONTATO 
-       (Mantido alto para compensar a rolagem) */
-    .contato h2 {
-        display: block;
-        padding-top: 160px !important; 
-        margin-top: -160px !important;
+    #portfolio {
+        scroll-margin-top: 140px; /* Mantém o alinhamento perfeito que você curtiu */
+    }
+
+    #contato {
+        scroll-margin-top: 140px; /* Pára o menu exatamente acima do Entre em Contato */
     }
 }
 /* ==========================================================================
-   FIM DO BLOCO DE RESPONSIVIDADE
+   FIM DO BLOCO
    ========================================================================== */
