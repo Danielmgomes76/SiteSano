@@ -199,29 +199,50 @@ nav a:hover::after {
 }
 
 .empresa-card {
-    background: #fff;
-    padding: 35px;
-    border-radius: 15px;
-    box-shadow: 0 5px 20px rgba(0,0,0,.06);
-    transition: .3s;
+    background-color: #ffffff;
+    border-radius: 12px;
+    flex: 1;
+    min-width: 280px;
+    max-width: 360px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); 
+    transition: all 0.3s ease;
+    
+    /* 🔥 Remove qualquer padding interno que o card antigo tinha para a faixa poder encostar nas bordas */
+    padding: 0 !important; 
+    overflow: hidden; /* Garante que os cantos da faixa fiquem arredondados junto com o card */
+    
+    display: flex;
+    flex-direction: column;
 }
-
+/* MICRO-INTERAÇÃO AO PASSAR O MOUSE */
 .empresa-card:hover {
-    transform: translateY(-8px);
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(76, 59, 136, 0.12);
 }
 
 .empresa-card h3 {
-    color: #5A46A0;
-    margin-bottom: 20px;
-    font-size: 1.4rem;
-    text-align: center;
+    background-color: #4C3B88; /* O roxo da Sano */
+    color: #ffffff !important; /* Texto Branco */
+    margin: 0 !important; /* Zera as margens para não criar espaços vazios */
+    padding: 22px 15px !important; /* Dá a altura e o respiro perfeito para a faixa */
+    font-size: 1.3rem;
+    font-weight: 700;
+    text-align: center; /* Centraliza o nome na faixa */
+    width: 100%;
+    box-sizing: border-box;
 }
 
+/* AJUSTE DO TEXTO PARA NÃO FICAR COLADO */
 .empresa-card p {
-    line-height: 1.8;
-    color: #555;
-    text-align: justify;
-    font-size: 1rem;
+    font-size: 0.95rem;
+    line-height: 1.65;
+    color: #444444;
+    text-align: left; /* Alinhado à esquerda resolve os buracos brancos do print */
+}
+.empresa-card .card-content, 
+.empresa-card p {
+    padding: 25px 24px !important; /* Devolve o espaço interno apenas para o texto */
+    margin: 0;
 }
 
 /* PORTFÓLIO & CARDS DE MARCAS */
@@ -244,20 +265,34 @@ nav a:hover::after {
 }
 
 .card {
-    background: white;
-    border-radius: 15px;
-    padding: 30px 20px;
-    box-shadow: 0 5px 25px rgba(0,0,0,.06);
-    transition: .3s;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+    background-color: #ffffff;
+    border-radius: 8px; /* Mantém o seu arredondamento original */
+    padding: 30px 24px;
+    flex: 1;
+    min-width: 280px;
+    max-width: 360px;
+    
+    /* 1. Uma micro-linha cinza bem clarinha no topo para dar acabamento */
+    border-top: 3px solid #e2e8f0; 
+    
+    /* 2. Uma sombra quase invisível para o card não parecer "colado" no fundo */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03); 
+    
+    /* 3. O SEGREDO: Diz ao navegador para suavizar qualquer movimento */
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    
+    position: relative;
 }
 
 .card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 10px 30px rgba(90, 70, 160, 0.12);
+    /* Faz o card subir suavemente, dando vida à seção */
+    transform: translateY(-4px); 
+    
+    /* A barrinha do topo acende com o roxo da Sano */
+    border-top-color: #4C3B88; 
+    
+    /* A sombra aumenta levemente acompanhando a subida do card */
+    box-shadow: 0 12px 20px rgba(76, 59, 136, 0.08); 
 }
 
 .card img {
