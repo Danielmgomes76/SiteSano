@@ -300,7 +300,8 @@ nav a:hover::after {
     width: auto;
     max-width: 100%;
     object-fit: contain;
-    margin-bottom: 15px;
+    margin: 0 auto 15px auto; /* 🎯 Adicionado 'auto' nas laterais para centralizar */
+    display: block;            /* 🎯 Força a imagem a aceitar o alinhamento automático */
 }
 
 .card-content {

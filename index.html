@@ -189,19 +189,89 @@
     </section>
     
     <section id="contato" class="contato">
-        <div class="container">
-            <h2>Entre em Contato</h2>
-            <p>Estamos prontos para atender você.</p>
-            <div class="contato-botoes">
-                <a href="https://wa.me/5599999999999" target="_blank" rel="noopener noreferrer" class="whatsapp">WhatsApp</a>
-                <a href="mailto:contato@suaempresa.com.br" class="email">E-mail</a>
+        <h2>Entre em Contato</h2>
+        <p>Estamos prontos para atender você. Preencha os dados abaixo e entraremos em contato o mais breve possível.</p>
+
+        <form id="form-contato" action="https://api.web3forms.com/submit" method="POST" class="contato-form">
+            
+            <input type="hidden" name="access_key" value="81a26c84-1c34-4d52-8ef4-88feb5d0399d">
+
+            <div class="form-group">
+                <label for="nome">Nome</label>
+                <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" required>
             </div>
-        </div>
+
+            <div class="form-group">
+                <label for="empresa">Empresa</label>
+                <input type="text" id="empresa" name="empresa" placeholder="Nome da sua empresa">
+            </div>
+
+            <div class="form-group">
+                <label for="telefone">Telefone</label>
+                <input type="tel" id="telefone" name="telefone" placeholder="(00) 00000-0000" required>
+            </div>
+
+            <div class="form-group">
+                <label for="mensagem">Mensagem</label>
+                <textarea id="mensagem" name="mensagem" rows="5" placeholder="Escreva sua mensagem aqui..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn-enviar">Enviar Mensagem</button>
+            <div id="mensagem-sucesso" style="display: none; color: #25d366; font-weight: bold; margin-top: 15px; text-align: center;">
+                Mensagem enviada com sucesso!
+            </div>
+        </form> 
     </section>
 
     <footer>
         <p>© 2026 Sano Representações - Todos os direitos reservados.</p>
     </footer>
+
+    <a href="https://wa.me/5585988307070" target="_blank" class="whatsapp-flutuante">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+    
+    <script>
+        document.getElementById('form-contato').addEventListener('submit', function(e) {
+            e.preventDefault(); 
+            
+            const form = this;
+            const btn = form.querySelector('.btn-enviar');
+            const msgSucesso = document.getElementById('mensagem-sucesso');
+            
+            btn.innerText = "Enviando...";
+            btn.disabled = true;
+
+            const formData = new FormData(form);
+
+            fetch(form.action, {
+                method: form.method,
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            })
+            .then(response => {
+                if (response.ok) {
+                    msgSucesso.style.display = 'block'; 
+                    form.reset(); // 🎯 Limpa todos os campos para um novo envio!
+                } else {
+                    alert("Ocorreu um erro ao enviar. Tente novamente.");
+                }
+            })
+            .catch(error => {
+                alert("Erro de conexão. Verifique sua internet.");
+            })
+            .finally(() => {
+                btn.innerText = "Enviar Mensagem";
+                btn.disabled = false;
+                
+                setTimeout(() => {
+                    msgSucesso.style.display = 'none';
+                }, 5000);
+            });
+        });
+    </script>
 
 </body>
 </html>
