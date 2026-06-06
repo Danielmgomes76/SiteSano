@@ -189,7 +189,7 @@ nav a:hover::after {
     text-align: center;
     margin-bottom: 60px;
     color: #5A46A0;
-    font-size: 2.2rem;
+    font-size: 1.8rem;
 }
 
 .empresa-grid {
@@ -255,7 +255,7 @@ nav a:hover::after {
     text-align: center;
     margin-bottom:30px;
     color: #5A46A0;
-    font-size: 2.2rem;
+    font-size: 1.8rem;
 }
 
 .cards {
@@ -365,7 +365,7 @@ nav a:hover::after {
 
 .contato h2 {
     color: #5A46A0;
-    font-size: 2.2rem;
+    font-size: 1.8rem;
     margin-bottom: 15px;
 }
 
