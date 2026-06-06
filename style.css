@@ -508,16 +508,17 @@ footer {
         text-align: center !important;
     }
 
-    /* Ancoragem fluida dos links - Aumentado para compensar a estrutura do bloco */
+    /* Ancoragem fluida dos links - Puxando os títulos mais para cima */
     #empresa {
-        scroll-margin-top: 80px !important;
+        scroll-margin-top: 85px !important; /* Puxa "Sobre a Empresa" mais para cima */
     }
 
     #portfolio {
-        scroll-margin-top: 80px !important;
+        scroll-margin-top: 85px !important; /* Puxa "Marcas Representadas" mais para cima */
     }
     
     #contato {
-        scroll-margin-top: 60px !important;
+        scroll-margin-top: 85px !important; /* Mantém o padrão alinhado para todos */
         min-height: auto !important;
     }
+}
