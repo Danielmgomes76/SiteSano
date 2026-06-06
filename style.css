@@ -401,11 +401,11 @@ footer {
 }
 
 /* ==========================================================================
-    BLOCO DE RESPONSIVIDADE ADAPTADO E ARRUMADO PARA SMARTPHONES
+   BLOCO DE RESPONSIVIDADE CORRIGIDO (FIM DOS BURACOS EM BRANCO)
    ========================================================================== */
 @media (max-width: 768px) {
     
-    /* 1. CABEÇALHO MOBILE */
+    /* 1. AJUSTES DO CABEÇALHO (HEADER) */
     header {
         width: 100vw; 
         left: 0;
@@ -442,7 +442,7 @@ footer {
         font-size: 0.9rem; 
     }
 
-    /* 2. CARROSSEL MOBILE */
+    /* 2. BLINDAGEM DO CARROSSEL (BANNER) */
     .marcas-slider {
         width: 100%;
         max-width: 100vw; 
@@ -464,43 +464,32 @@ footer {
         text-align: center;
     }
 
-    /* 3. SEÇÕES COM REAPROVEITAMENTO DAS MARGENS LATERAIS */
+    /* 3. NORMALIZAÇÃO DO TAMANHO DAS SEÇÕES (REDUZIDO) */
     .empresa, .portfolio, .contato {
         display: block !important;
         clear: both !important;
         position: relative !important;
         box-sizing: border-box !important;
-        padding: 60px 0 !important; /* Espaçamento vertical equilibrado */
+        /* Remove os paddings gigantes e deixa um espaçamento interno padrão e limpo */
+        padding: 50px 20px !important; 
     }
 
-    /* Ajuste estrutural do Grid da Empresa e Portfólio no Celular */
-    .empresa-grid, .cards {
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important;
-        gap: 25px !important;
-        width: 100% !important;
-        padding: 0 5% !important; /* Alinha a tabulação criando margens perfeitas na tela */
-    }
-
-    /* Ajuste de Cards individuais */
-    .empresa-card, .card {
-        max-width: 100% !important;
-        width: 100% !important;
-    }
-
-    /* Libera e normaliza o preenchimento dos parágrafos dos cards */
+    /* Libera a altura dos textos nos cards */
     .card-content p {
         height: auto !important; 
         margin-bottom: 20px !important;
     }
 
-    .empresa-card p {
-        text-align: left !important;
-        padding: 20px 18px 25px 18px !important;
+    /* Garante que o container de cards não quebre o layout */
+    .portfolio .cards {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 25px !important;
+        width: 100% !important;
+        margin-bottom: 20px !important;
     }
 
-    /* Reset de Títulos */
+    /* Reset definitivo dos h2 */
     .empresa h2, .portfolio h2, .contato h2 {
         padding-top: 0 !important;
         margin-top: 0 !important;
@@ -508,22 +497,25 @@ footer {
         text-align: center !important;
     }
 
-    /* Ancoragem fluida dos links - Puxando os títulos mais para cima */
+    /* ==========================================================================
+       🎯 NOVA ANCORAGEM PERFEITA (O SEGREDO PARA NÃO CORTAR)
+       ========================================================================== */
+    
+    /* Quando clicar nos links, o navegador vai parar exatamente 135px ANTES da seção,
+       escondendo o botão da seção anterior perfeitamente atrás do menu branco */
     #empresa {
-        scroll-margin-top: 85px !important; /* Puxa "Sobre a Empresa" mais para cima */
+        scroll-margin-top: 135px !important;
     }
 
     #portfolio {
-        scroll-margin-top: 85px !important; /* Puxa "Marcas Representadas" mais para cima */
+        scroll-margin-top: 135px !important;
     }
-    
-    /* Forçando a quebra e isolamento da seção de contato no mobile */
+
     #contato {
-        scroll-margin-top: 0 !important; /* Reseta o scroll margin para usar o truque do padding */
-        padding-top: 140px !important;   /* Cria um espaço seguro invisível no topo da seção */
-        margin-top: -60px !important;    /* Ajusta a aproximação para não criar um buraco em branco */
-        min-height: auto !important;
-        display: block !important;
-        clear: both !important;
+        scroll-margin-top: 135px !important;
+        min-height: auto !important; /* Remove o tamanho gigante anterior */
     }
 }
+/* ==========================================================================
+   FIM DO BLOCO
+   ========================================================================== */
