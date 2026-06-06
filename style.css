@@ -508,12 +508,16 @@ footer {
         text-align: center !important;
     }
 
-    /* Ancoragem fluida dos links */
-    #empresa, #portfolio, #contato {
-        scroll-margin-top: 135px !important;
+    /* Ancoragem fluida dos links - Aumentado para compensar a estrutura do bloco */
+    #empresa {
+        scroll-margin-top: 80px !important;
+    }
+
+    #portfolio {
+        scroll-margin-top: 80px !important;
     }
     
     #contato {
+        scroll-margin-top: 60px !important;
         min-height: auto !important;
     }
-}
