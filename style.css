@@ -480,19 +480,14 @@ footer {
         clear: both !important;
         position: relative !important;
         box-sizing: border-box !important;
+        /* Remove os paddings gigantes e deixa um espaçamento interno padrão e limpo */
         padding: 50px 20px !important; 
     }
 
-    /* Libera a altura dos textos nos cards do portfólio */
+    /* Libera a altura dos textos nos cards */
     .card-content p {
         height: auto !important; 
         margin-bottom: 20px !important;
-    }
-
-    /* Ajuste para o texto interno do card sobre a empresa no celular */
-    .empresa-card p {
-        text-align: left !important;
-        padding: 20px 18px 25px 18px !important;
     }
 
     /* Garante que o container de cards não quebre o layout */
@@ -515,16 +510,22 @@ footer {
     /* ==========================================================================
        🎯 NOVA ANCORAGEM PERFEITA (O SEGREDO PARA NÃO CORTAR)
        ========================================================================== */
+    
+    /* Quando clicar nos links, o navegador vai parar exatamente 135px ANTES da seção,
+       escondendo o botão da seção anterior perfeitamente atrás do menu branco */
     #empresa {
-        scroll-margin-top: 60px !important;
+        scroll-margin-top: 135px !important;
     }
 
     #portfolio {
-        scroll-margin-top: 60px !important;
+        scroll-margin-top: 135px !important;
     }
 
     #contato {
-        scroll-margin-top: 60px !important;
-        min-height: auto !important;
+        scroll-margin-top: 135px !important;
+        min-height: auto !important; /* Remove o tamanho gigante anterior */
     }
 }
+/* ==========================================================================
+   FIM DO BLOCO
+   ========================================================================== */
