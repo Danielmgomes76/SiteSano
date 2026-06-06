@@ -227,4 +227,5 @@ nav a:hover::after {
     margin: 0 !important; 
     padding: 22px 15px !important; 
     font-size: 1.3rem !important;
-    font
+    font-weight: 600 !important;
+}
