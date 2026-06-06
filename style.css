@@ -16,6 +16,7 @@ body {
     overflow-x: hidden; /* Garante que nada quebre a largura da tela */
     width: 100%;
 }
+
 .container {
     width: 90%;
     max-width: 1200px;
@@ -181,7 +182,7 @@ nav a:hover::after {
 
 /* EMPRESA */
 .empresa {
-    padding: 130px 0 100px 0; /* Aumentamos o espaçamento no topo de 100px para 140px */
+    padding: 130px 0 100px 0; 
     background: #ecf8d3;
 }
 
@@ -207,42 +208,41 @@ nav a:hover::after {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); 
     transition: all 0.3s ease;
     
-    /* 🔥 Remove qualquer padding interno que o card antigo tinha para a faixa poder encostar nas bordas */
+    /* Zera o preenchimento estrutural externo para que a faixa colha nas laterais */
     padding: 0 !important; 
-    overflow: hidden; /* Garante que os cantos da faixa fiquem arredondados junto com o card */
+    overflow: hidden; /* Mantém os cantos arredondados na faixa */
     
     display: flex;
     flex-direction: column;
 }
+
 /* MICRO-INTERAÇÃO AO PASSAR O MOUSE */
 .empresa-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 12px 24px rgba(76, 59, 136, 0.12);
 }
 
+/* FAIXA COLORIDA ROXA COM O NOME EM BRANCO */
 .empresa-card h3 {
-    background-color: #4C3B88; /* O roxo da Sano */
+    background-color: #4C3B88 !important; /* O roxo da Sano */
     color: #ffffff !important; /* Texto Branco */
-    margin: 0 !important; /* Zera as margens para não criar espaços vazios */
-    padding: 22px 15px !important; /* Dá a altura e o respiro perfeito para a faixa */
-    font-size: 1.3rem;
-    font-weight: 700;
-    text-align: center; /* Centraliza o nome na faixa */
-    width: 100%;
-    box-sizing: border-box;
+    margin: 0 !important; 
+    padding: 22px 15px !important; /* Respiro vertical interno da faixa */
+    font-size: 1.3rem !important;
+    font-weight: 700 !important;
+    text-align: center !important; /* Centraliza o nome */
+    width: 100% !important;
+    box-sizing: border-box !important;
 }
 
-/* AJUSTE DO TEXTO PARA NÃO FICAR COLADO */
+/* AJUSTE EXCLUSIVO DO TEXTO INTERNO DO CARD DA EMPRESA */
 .empresa-card p {
-    font-size: 0.95rem;
-    line-height: 1.65;
-    color: #444444;
-    text-align: left; /* Alinhado à esquerda resolve os buracos brancos do print */
-}
-.empresa-card .card-content, 
-.empresa-card p {
-    padding: 25px 24px !important; /* Devolve o espaço interno apenas para o texto */
-    margin: 0;
+    font-size: 0.95rem !important;
+    line-height: 1.65 !important;
+    color: #444444 !important;
+    text-align: left !important; /* Alinhamento correto que elimina os buracos */
+    padding: 25px 24px 30px 24px !important; /* Espaçamento interno em relação às bordas */
+    margin: 0 !important;
 }
 
 /* PORTFÓLIO & CARDS DE MARCAS */
@@ -480,14 +480,19 @@ footer {
         clear: both !important;
         position: relative !important;
         box-sizing: border-box !important;
-        /* Remove os paddings gigantes e deixa um espaçamento interno padrão e limpo */
         padding: 50px 20px !important; 
     }
 
-    /* Libera a altura dos textos nos cards */
+    /* Libera a altura dos textos nos cards do portfólio */
     .card-content p {
         height: auto !important; 
         margin-bottom: 20px !important;
+    }
+
+    /* Ajuste para o texto interno do card sobre a empresa no celular */
+    .empresa-card p {
+        text-align: left !important;
+        padding: 20px 18px 25px 18px !important;
     }
 
     /* Garante que o container de cards não quebre o layout */
@@ -510,9 +515,6 @@ footer {
     /* ==========================================================================
        🎯 NOVA ANCORAGEM PERFEITA (O SEGREDO PARA NÃO CORTAR)
        ========================================================================== */
-    
-    /* Quando clicar nos links, o navegador vai parar exatamente 135px ANTES da seção,
-       escondendo o botão da seção anterior perfeitamente atrás do menu branco */
     #empresa {
         scroll-margin-top: 135px !important;
     }
@@ -523,9 +525,6 @@ footer {
 
     #contato {
         scroll-margin-top: 135px !important;
-        min-height: auto !important; /* Remove o tamanho gigante anterior */
+        min-height: auto !important;
     }
 }
-/* ==========================================================================
-   FIM DO BLOCO
-   ========================================================================== */
