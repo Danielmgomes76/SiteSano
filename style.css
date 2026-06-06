@@ -519,16 +519,20 @@ footer {
     }
 
     /* Ancoragem fluida dos links - Puxando os títulos mais para cima */
+   /* ==========================================================================
+        🎯 NOVA ANCORAGEM PERFEITA PADRONIZADA
+       ========================================================================== */
+    
     #empresa {
-        scroll-margin-top: 85px !important; /* Puxa "Sobre a Empresa" mais para cima */
+        scroll-margin-top: 85px !important; /* Deixa coladinho no menu */
     }
 
     #portfolio {
-        scroll-margin-top: 85px !important; /* Puxa "Marcas Representadas" mais para cima */
+        scroll-margin-top: 85px !important; /* Deixa coladinho no menu */
     }
-    
+
     #contato {
-        scroll-margin-top: 85px !important; /* Mantém o padrão alinhado para todos */
-        min-height: auto !important;
+        scroll-margin-top: 85px !important; /* Agora segue exatamente o mesmo padrão dos outros */
+        min-height: auto !important; 
     }
 }
