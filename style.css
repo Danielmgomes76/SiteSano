@@ -481,6 +481,31 @@ footer {
     cursor: not-allowed;
 }
 
+.whatsapp-flutuante {
+    position: fixed;          /* Prega o botão na tela */
+    bottom: 40px;             /* Distância do rodapé */
+    right: 40px;              /* Distância do canto direito */
+    width: 60px;
+    height: 60px;
+    background-color: #25d366; /* Verde do WhatsApp */
+    color: #ffffff !important;
+    border-radius: 50%;       /* Deixa redondo */
+    font-size: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.3); /* Sombra de flutuação */
+    z-index: 99999;           /* Fica na frente de tudo */
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+/* Efeito ao passar o mouse */
+.whatsapp-flutuante:hover {
+    transform: scale(1.1);
+    color: #ffffff !important;
+}
+
 /* ==========================================================================
     BLOCO DE RESPONSIVIDADE ADAPTADO E ARRUMADO PARA SMARTPHONES
    ========================================================================== */
@@ -615,4 +640,13 @@ footer {
         scroll-margin-top: -20px !important; 
         min-height: auto !important; 
     }
+
+    .whatsapp-flutuante {
+        width: 50px;
+        height: 50px;
+        bottom: 20px;
+        right: 20px;
+        font-size: 28px;
+    }
+
 }
