@@ -536,7 +536,7 @@ footer {
     }
 
     .logo img {
-        height: 45px; 
+        height: 60px; 
         display: block;
         margin: 0 auto;
     }
@@ -570,7 +570,7 @@ footer {
     -webkit-user-select: none; /* Safari/iOS */
     -ms-user-select: none;     /* IE/Edge antigo */
     }
-    
+
     .marcas-track img {
     pointer-events: none; /* opcional: evita clique direto na imagem */
     }
