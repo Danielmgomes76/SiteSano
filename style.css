@@ -171,7 +171,7 @@ nav a:hover::after {
     transition: .3s;
     display: inline-block;
     margin-top: 50px; /* Aumentamos o espaço aqui */
-    box-shadow: 0 4px 15px #463878;
+    box-shadow: 0 4px 15px rgba(166, 200, 10, 0.3);
 }
 
 .btn:hover {
@@ -331,6 +331,7 @@ nav a:hover::after {
 .faixa-fhon { background: #F5A623; }
 .faixa-cozinha-leve { background: #B91C1C; }
 .faixa-fruit-titus { background: #A6243C; }
+.faixa-prado { background: #000000; }
 
 .card-content p {
     text-align: justify;
