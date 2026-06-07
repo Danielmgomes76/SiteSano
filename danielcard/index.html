@@ -25,10 +25,10 @@
 
         <div class="links-container">
             
-            <a href="https://drive.google.com/file/d/1gJEhtTlLkWolUKIYNFw5A9bG6WpKQWx6/view?usp=drive_link" target="_blank" class="btn-link btn-agenda">
+            <a href="contato.vcf" id="btn-agenda-inteligente" download="Daniel_Gomes.vcf" type="text/vcard" class="btn-link btn-agenda">
             <i class="fa-solid fa-user-plus"></i>
             <span>Salvar na Agenda</span>
-          </a>
+            </a>
 
             <a href="https://wa.me/5585988307070" target="_blank" class="btn-link btn-whatsapp">
                 <i class="fa-brands fa-whatsapp"></i>
@@ -56,6 +56,23 @@
             <img src="Imagem/Logo-Original.png" alt="Logo Empresa" class="logo-empresa">
         </div>
     </div>
-
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var btnAgenda = document.getElementById("btn-agenda-inteligente");
+        
+        // Detecta se o usuário está usando Android
+        var isAndroid = /Android/i.test(navigator.userAgent);
+        
+        if (isAndroid) {
+            // Se for Android, troca o link para o download direto do Google Drive
+            btnAgenda.href = "https://drive.google.com/uc?export=download&id=1gJEhtTlLkWolUKIYNFw5A9bG6WpKQWx6";
+            btnAgenda.removeAttribute("download");
+            btnAgenda.removeAttribute("type");
+            btnAgenda.target = "_blank";
+        }
+        // Se for iOS (iPhone), ele não entra no 'if' e mantém o link original 'contato.vcf' que abre nativo!
+        });
+        
+</script>
 </body>
 </html>
