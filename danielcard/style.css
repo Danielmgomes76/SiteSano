@@ -1,159 +1,153 @@
+/* Configurações Gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
 body {
-  font-family: 'Segoe UI', Arial, sans-serif;
-  background: linear-gradient(135deg, #f0fff4, #e6fffa);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
+    background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
 }
 
-.card {
-  background: #fff;
-  border-radius: 15px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-  padding: 20px;
-  text-align: center;
-  width: 95%;          /* ocupa quase toda a tela */
-  max-width: 600px;    /* limite para desktop */
-  margin: 0 auto;      /* centraliza */
+/* Container do Cartão */
+.cartao-container {
+    background: #ffffff;
+    width: 100%;
+    max-width: 400px;
+    border-radius: 24px;
+    padding: 35px 25px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    text-align: center;
 }
 
-.header {
-  text-align: left;   /* logo alinhada à esquerda */
-  margin-bottom: 15px;
-  border-bottom: 1px solid #e2e8f0; /* divisória sutil */
-  padding-bottom: 10px;
+/* Área da Foto e Nome */
+/* 🎯 Substitua o .cargo antigo por este aqui: */
+.perfil-topo .cargo {
+    display: inline-block;
+    background-color: #1f2937 !important; /* Cor escura de destaque */
+    color: #ffffff !important;            /* Letra branca */
+    font-size: 0.95rem !important;
+    font-weight: 700 !important;          /* Negrito */
+    padding: 6px 18px !important;
+    border-radius: 50px !important;       /* Formato arredondado */
+    
+    /* 🎯 ESSE É O SEGREDO: Afasta do nome em cima e afasta dos botões embaixo */
+    margin-top: 15px !important;       
+    margin-bottom: 25px !important;     
+    
+    letter-spacing: 0.5px !important;
 }
 
-.logo {
-  width: 120px;       /* tamanho da logo */
+/* Pode colar este logo abaixo do .cargo */
+.sub-empresa {
+    font-size: 0.9rem;
+    color: #6b7280;
+    font-weight: 600;
 }
 
-.nome {
-  margin-top: 5px;
-  margin-bottom: 2px;
-  font-size: 20px;
-  font-weight: bold;
-  color: #2f855a;
-  text-align: center;
+.foto-container {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 15px auto;
+    border-radius: 50%;
+    border: 4px solid #ffffff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
 }
 
-.avatar {
-  width: 120px;       /* controla o tamanho da foto */
-  height: 120px;      /* mantém proporção circular */
-  border-radius: 50%; /* deixa redonda */
-  object-fit: cover;  /* garante que não distorça */
-  margin: 0 auto 8px; /* centraliza e dá espaço abaixo */
-  display: block;
-}
-h1 {
-  font-size: 1.6em;
-  color: #2f855a;
-  margin-bottom: 10px;
+.foto-perfil {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
- 
-p {
-  color: #2f855a;
-  margin: 5px 0;
+.perfil-topo h1 {
+    font-size: 1.5rem;
+    color: #1f2937;
+    font-weight: 700;
+    margin-bottom: 5px;
 }
 
-.nome {
-  margin-top: 0;      /* cola no avatar */
-  margin-bottom: 4px; /* aproxima da empresa */
-  font-size: 20px;
-  font-weight: bold;
-  color: #2f855a;
-  text-align: center;
+.perfil-topo .cargo {
+    font-size: 0.9rem;
+    color: #6b7280;
+    font-weight: 500;
 }
 
-.empresa {
-  margin-top: 0;
-  margin-bottom: 8px;
-  font-size: 16px;
-  font-weight: 500;
-  color: #2f855a; /* verde igual ao nome */
-  text-align: center;
+/* Container dos Links */
+.links-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 35px;
 }
 
-bbutton {
-  margin-top: 5px;    /* bem próximo da empresa */
-  margin-bottom: 15px; /* antes dos ícones */
-  padding: 10px 16px;
-  background: #38a169;
-  color: #fff;
-  border: none;
-  border-radius: 6px;
-  font-weight: 500;
-  cursor: pointer;
-  transition: background 0.3s ease;
+/* Estilo Base dos Botões */
+.btn-link {
+    display: flex;
+    align-items: center;
+    padding: 16px 20px;
+    text-decoration: none;
+    border-radius: 14px;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    gap: 15px;
 }
 
-button:hover {
-  background: #2f855a;
-  transform: translateY(-2px);
+.btn-link i {
+    font-size: 1.3rem;
+    width: 25px;
+    text-align: center;
 }
 
-.contact-icons {
-  display: flex;
-  justify-content: center;
-  gap: 25px;
-  margin-top: 15px;
-  height: 60px; /* reserva espaço para o hover */
-  align-items: center;
+.btn-link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
-
-.icon img {
-  width: 40px;
-  height: 40px;
-  transition: transform 0.2s ease;
+/* Cores Customizadas dos Botões */
+.btn-agenda {
+    background-color: #4f46e5; /* Roxo/Azul moderno */
+    color: #ffffff;
 }
 
-.icon img:hover {
-  transform: scale(1.05); /* menor aumento */
+.btn-whatsapp {
+    background-color: #25d366; /* Verde WhatsApp */
+    color: #ffffff;
 }
 
-
-.whatsapp img { filter: drop-shadow(0 0 4px #25D366); }
-.email img { filter: drop-shadow(0 0 4px #0078D4); }
-.phone img { filter: drop-shadow(0 0 4px #6B46C1); }
-
-button {
-  margin-top: 20px;
-  padding: 12px 18px;
-  background: #38a169;
-  color: #fff;
-  border: none;
-  border-radius: 8px;
-  font-weight: 500;
-  cursor: pointer;
-  transition: background 0.3s ease, transform 0.2s ease;
+.btn-telefone {
+    background-color: #10b981; /* Verde Esmeralda */
+    color: #ffffff;
 }
 
-button:hover {
-  background: #2f855a;
-  transform: translateY(-2px);
+.btn-email {
+    background-color: #ef4444; /* Vermelho */
+    color: #ffffff;
 }
 
-@media (max-width: 768px) {
-  .card {
-    width: 100%;       /* ocupa toda a tela no celular */
-    border-radius: 0;  /* estilo app no mobile */
-    height: 100vh;     /* altura total da tela */
-  }
+.btn-site {
+    background-color: #1f2937; /* Grafite escuro */
+    color: #ffffff;
+}
 
-  .avatar {
-    width: 100px;     /* foto menor no celular */
-    height: 100px;
-  }
+/* Rodapé */
+.rodape {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.8;
+}
 
-  .nome {
-    font-size: 18px;
-  }
-
-  .empresa {
-    font-size: 14px;
-  }
+.logo-empresa {
+    max-height: 45px;
+    object-fit: contain;
 }

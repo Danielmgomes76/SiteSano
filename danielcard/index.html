@@ -1,38 +1,59 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <title>Cartão Digital - Daniel Gomes</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Cartão Virtual</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="card">
-  <!-- Logo -->
-  <div class="header">
-    <img src="Imagem/Logo-Original.png" alt="Sano Representações" class="logo">
-  </div>
 
-  <!-- Foto -->
-  <img src="Imagem/daniel-imagem.jpeg" alt="Daniel Gomes" class="avatar">
+    <div class="cartao-container">
+        <div class="perfil-topo">
+            <div class="foto-container">
+                <img src="Imagem/daniel-imagem.jpeg" alt="Minha Foto" class="foto-perfil">
+            </div>
+            <h1>Daniel Gomes</h1>
+            <p class="cargo">Representante Comercial</p>
+        </div>
 
-<h1 class="nome">Daniel Gomes</h1>
-<h2 class="empresa">Sano Representações</h2>
+        <div class="links-container">
+            
+            <a href="contato.vcf" class="btn-link btn-agenda">
+                <i class="fa-solid fa-user-plus"></i>
+                <span>Salvar na Agenda</span>
+            </a>
 
-<button onclick="window.location.href='vCard.vcf'">Adicionar Contato</button>
+            <a href="https://wa.me/5585988307070" target="_blank" class="btn-link btn-whatsapp">
+                <i class="fa-brands fa-whatsapp"></i>
+                <span>Conversar no WhatsApp</span>
+            </a>
 
-  <!-- Ícones de contato abaixo -->
-  <div class="contact-icons">
-  <a href="https://wa.me/5585988307070" target="_blank" class="icon whatsapp" title="WhatsApp">
-    <img src="Imagem/app.png" alt="WhatsApp">
-  </a>
-  <a href="mailto:daniel@sanorepresentacoes.com.br" class="icon email" title="E-mail">
-    <img src="Imagem/email-redondo.png" alt="E-mail">
-  </a>
-  <a href="tel:+5585988307070" class="icon phone" title="Telefone">
-    <img src="Imagem/phone-call.png" alt="Telefone">
-  </a>
-</div>
+            <a href="tel:+5585988307070" class="btn-link btn-telefone">
+                <i class="fa-solid fa-phone"></i>
+                <span>Ligar Agora</span>
+            </a>
 
-</div>
+            <a href="daniel@sanorepresentacoes.com.br" class="btn-link btn-email">
+                <i class="fa-solid fa-envelope"></i>
+                <span>Enviar E-mail</span>
+            </a>
+
+            <a href="www.sanorepresentacoes.com.br" target="_blank" class="btn-link btn-site">
+                <i class="fa-solid fa-globe"></i>
+                <span>Visitar Nosso Site</span>
+            </a>
+
+        </div>
+
+        <div class="rodape">
+            <img src="Imagem/Logo-Original.png" alt="Logo Empresa" class="logo-empresa">
+        </div>
+    </div>
+
 </body>
 </html>
