@@ -10,15 +10,14 @@ body {
 
 .card {
   background: #fff;
-  border-radius: 15px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-  padding: 20px;          /* reduz padding interno */
+  border-radius: 0;        /* sem cantos arredondados, estilo tela cheia */
+  box-shadow: none;        /* remove sombra se quiser estilo app */
+  padding: 20px;
   text-align: center;
-  width: 90%;             /* ocupa quase toda a largura da tela */
-  max-width: 600px;       /* limite maior para telas grandes */
-  margin: 0 auto;         /* centraliza */
+  width: 100vw;            /* largura total da viewport */
+  height: 100vh;           /* altura total da viewport */
+  margin: 0;               /* remove margens */
 }
-
 
 .header {
   text-align: left;   /* logo alinhada à esquerda */
