@@ -566,8 +566,13 @@ footer {
     }
     
     .marcas-track {
-        gap: 30px; 
-    }
+    gap: 30px;
+    min-height: 55px; /* igual à altura das imagens */
+    display: inline-flex;
+    align-items: center; /* centraliza verticalmente */
+    white-space: nowrap;
+}
+
 
     .marcas-track img {
         height: 55px; 
