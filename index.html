@@ -17,6 +17,8 @@
     <!-- Compatibilidade com Android -->
     <link rel="icon" type="image/png" sizes="192x192" href="imagens/android-chrome-192x192.png">
     <link rel="icon" type="image/png" sizes="512x512" href="imagens/android-chrome-512x512.png">
+    
+    <link rel="preload" as="image" href="Imagens/logo1.webp">
 
     <link rel="stylesheet" href="style.css">
 
@@ -309,10 +311,32 @@
             });
         });
     </script>
-
+  
     <a href="https://wa.me/5585988307070" target="_blank" class="whatsapp-flutuante">
         <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" style="width: 60%; height: 60%;">
     </a>
+
+      <script>
+        const track = document.querySelector(".marcas-track");
+
+        // Pausar quando o usuário tocar/segurar (mobile)
+        track.addEventListener("touchstart", () => {
+        track.style.animationPlayState = "paused";
+        });
+
+        // Retomar quando soltar
+        track.addEventListener("touchend", () => {
+        track.style.animationPlayState = "running";
+        });
+
+        // Opcional: pausar no hover (desktop)
+        track.addEventListener("mouseenter", () => {
+        track.style.animationPlayState = "paused";
+        });
+        track.addEventListener("mouseleave", () => {
+        track.style.animationPlayState = "running";
+        });
+    </script>
 
 </body>
 </html>

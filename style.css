@@ -565,18 +565,16 @@ footer {
         margin: 20px auto;
     }
     
-    .marcas-track {
-    gap: 30px;
-    min-height: 55px; /* igual à altura das imagens */
-    display: inline-flex;
-    align-items: center; /* centraliza verticalmente */
-    white-space: nowrap;
-}
-
-
-    .marcas-track img {
-        height: 55px; 
+   .marcas-track {
+    user-select: none;   /* impede seleção */
+    -webkit-user-select: none; /* Safari/iOS */
+    -ms-user-select: none;     /* IE/Edge antigo */
     }
+    
+    .marcas-track img {
+    pointer-events: none; /* opcional: evita clique direto na imagem */
+    }
+
 
     .btn {
         margin-top: 30px; 
