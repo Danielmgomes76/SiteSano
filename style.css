@@ -536,7 +536,7 @@ footer {
     }
 
     .logo img {
-        height: 60px; 
+        height: 45px; 
         display: block;
         margin: 0 auto;
     }
@@ -570,7 +570,7 @@ footer {
     -webkit-user-select: none; /* Safari/iOS */
     -ms-user-select: none;     /* IE/Edge antigo */
     }
-
+    
     .marcas-track img {
     pointer-events: none; /* opcional: evita clique direto na imagem */
     }
@@ -641,11 +641,11 @@ footer {
        ========================================================================== */
     
     #empresa {
-        scroll-margin-top: 60px !important; 
+        scroll-margin-top: 70px !important; 
     }
 
     #portfolio {
-        scroll-margin-top: 50px !important; 
+        scroll-margin-top: 60px !important; 
     }
 
     #contato {
