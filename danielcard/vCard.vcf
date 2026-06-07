@@ -2,9 +2,7 @@ BEGIN:VCARD
 VERSION:3.0
 FN:Daniel Gomes
 ORG:Sano Representações
-TEL;TYPE=cell:+55-85-98830-7070
-TEL;TYPE=whatsapp:+55-85-98830-7070
+TITLE:Departamento Comercial
+TEL;TYPE=CELL:+55 85 98830-7070
 EMAIL:daniel@sanorepresentacoes.com.br
-URL:https://sanorepresentacoes.com.br
-NOTE:Disponível também no WhatsApp
 END:VCARD
