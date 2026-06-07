@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght=400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2=family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -19,7 +19,8 @@
             </div>
             <h1>Daniel Gomes</h1>
             <p class="cargo">Representante Comercial</p>
-            <p class="sub-empresa">Sano Representações</p>
+            
+            <p class="sub-empresa" style="font-size: 1.3rem; font-weight: 600; color: #333; margin-bottom: 20px;">Sano Representações</p>
         </div>
         
 
@@ -61,17 +62,14 @@
     document.addEventListener("DOMContentLoaded", function() {
         var btnAgenda = document.getElementById("btn-agenda-inteligente");
         if (btnAgenda) {
-            // Detecta se é Android (Samsung, Motorola, Xiaomi, etc)
             var isAndroid = /Android/i.test(navigator.userAgent);
             
             if (isAndroid) {
-                // SÓ o Android vai para o Google Drive
                 btnAgenda.href = "https://drive.google.com/uc?export=download&id=1gJEhtTlLkWolUKIYNFw5A9bG6WpKQWx6";
                 btnAgenda.removeAttribute("download");
                 btnAgenda.removeAttribute("type");
                 btnAgenda.target = "_blank";
             } else {
-                // iPhone (iOS) e computadores usam o arquivo local que abre perfeito nativamente
                 btnAgenda.href = "contato.vcf";
                 btnAgenda.setAttribute("download", "Daniel_Gomes.vcf");
                 btnAgenda.setAttribute("type", "text/vcard");
