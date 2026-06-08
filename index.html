@@ -7,14 +7,11 @@
 
     <link rel="shortcut icon" href="imagens/Icone.ico" type="image/x-icon">
     
-    <!-- Favicon padrão -->
     <link rel="icon" type="image/png" sizes="32x32" href="imagens/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="48x48" href="imagens/favicon-32x32.png">
 
-    <!-- Compatibilidade com iPhone/iPad -->
     <link rel="apple-touch-icon" sizes="180x180" href="imagens/apple-touch-icon.png">
 
-    <!-- Compatibilidade com Android -->
     <link rel="icon" type="image/png" sizes="192x192" href="imagens/android-chrome-192x192.png">
     <link rel="icon" type="image/png" sizes="512x512" href="imagens/android-chrome-512x512.png">
     
@@ -31,8 +28,8 @@
 
             <div class="logo">
                 <a href="index.html">
-            <img src="Imagens/Logo-Original.png" alt="Logo">
-            </a>
+                    <img src="Imagens/Logo-Original.png" alt="Logo">
+                </a>
             </div>
 
             <nav>
@@ -96,7 +93,7 @@
                 <div class="empresa-card">
                     <h3>Missão e Visão</h3>
                     <p>
-                        Nossa missão é representar marcas comprometidas com saúde, quality e sustentabilidade. Nossa visão é ser referência no Nordeste na distribuição e representação de produtos que promovam bem-estar e alimentação consciente.
+                        Nossa missão é representar marcas comprometidas com saúde, qualidade e sustentabilidade. Nossa visão é ser referência no Nordeste na distribution e representação de produtos que promovam bem-estar e alimentação consciente.
                     </p>
                 </div>
 
@@ -268,8 +265,6 @@
         <p>© 2026 Sano Representações - Todos os direitos reservados.</p>
     </footer>
 
-    
-    
     <script>
         document.getElementById('form-contato').addEventListener('submit', function(e) {
             e.preventDefault(); 
@@ -293,7 +288,7 @@
             .then(response => {
                 if (response.ok) {
                     msgSucesso.style.display = 'block'; 
-                    form.reset(); // 🎯 Limpa todos os campos para um novo envio!
+                    form.reset(); // Limpa todos os campos para um novo envio!
                 } else {
                     alert("Ocorreu um erro ao enviar. Tente novamente.");
                 }
@@ -316,25 +311,25 @@
         <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" style="width: 60%; height: 60%;">
     </a>
 
-      <script>
+    <script>
         const track = document.querySelector(".marcas-track");
 
         // Pausar quando o usuário tocar/segurar (mobile)
         track.addEventListener("touchstart", () => {
-        track.style.animationPlayState = "paused";
+            track.style.animationPlayState = "paused";
         });
 
         // Retomar quando soltar
         track.addEventListener("touchend", () => {
-        track.style.animationPlayState = "running";
+            track.style.animationPlayState = "running";
         });
 
         // Opcional: pausar no hover (desktop)
         track.addEventListener("mouseenter", () => {
-        track.style.animationPlayState = "paused";
+            track.style.animationPlayState = "paused";
         });
         track.addEventListener("mouseleave", () => {
-        track.style.animationPlayState = "running";
+            track.style.animationPlayState = "running";
         });
     </script>
 
