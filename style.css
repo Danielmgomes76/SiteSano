@@ -332,6 +332,7 @@ nav a:hover::after {
 .faixa-cozinha-leve { background: #B91C1C; }
 .faixa-fruit-titus { background: #A6243C; }
 .faixa-prado { background: #000000; }
+.faixa-jamu { background: #ff9913; }
 
 .card-content p {
     text-align: justify;
