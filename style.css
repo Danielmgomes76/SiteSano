@@ -333,6 +333,7 @@ nav a:hover::after {
 .faixa-fruit-titus { background: #A6243C; }
 .faixa-prado { background: #000000; }
 .faixa-jamu { background: #ff9913; }
+.faixa-naked { background: #ff4fa3; }
 
 .card-content p {
     text-align: justify;
