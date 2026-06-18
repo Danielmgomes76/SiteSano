@@ -334,6 +334,8 @@ nav a:hover::after {
 .faixa-prado { background: #000000; }
 .faixa-jamu { background: #ff9913; }
 .faixa-naked { background: #ff4fa3; }
+.faixa-seudivino { background: #e29d1e; }
+
 
 .card-content p {
     text-align: justify;
